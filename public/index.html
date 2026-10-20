@@ -1,0 +1,1289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sai Chand Olupalli | Data Analyst & Web Developer Portfolio</title>
+    <meta name="description" content="Portfolio of Olupalli Sai Chand - MCA Graduate, Data Analyst, Machine Learning Enthusiast, and Frontend Developer. Explore projects, research publications, certifications, and get in touch.">
+    <meta name="keywords" content="Sai Chand Olupalli, Data Analyst, Frontend Developer, Machine Learning, Python, Power BI, SQL, Portfolio, MCA, Vijayawada">
+    <meta name="author" content="Olupalli Sai Chand">
+
+    <!-- Open Graph / Meta -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Sai Chand Olupalli | Data Analyst & Web Developer">
+    <meta property="og:description" content="Explore projects, research publications, skills, and get in touch directly.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Canvas Particle Mesh Background -->
+    <canvas id="particle-canvas"></canvas>
+
+    <!-- Floating Scroll To Top Button -->
+    <button id="scrollToTopBtn" class="scroll-top-btn" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Toast Notification Container -->
+    <div id="toast" class="toast">
+        <div class="toast-icon"><i class="fas fa-check-circle"></i></div>
+        <div class="toast-content">
+            <h4 id="toast-title">Success</h4>
+            <p id="toast-message">Message sent successfully!</p>
+        </div>
+        <button class="toast-close" onclick="hideToast()">&times;</button>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="header" id="header">
+        <div class="nav-container">
+            <a href="#home" class="brand-logo">
+                <span class="logo-badge">SC</span>
+                <span class="logo-text">Sai Chand<span class="dot">.</span></span>
+            </a>
+
+            <nav class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#education" class="nav-link">Education</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#publications" class="nav-link">Publications</a></li>
+                    <li><a href="#certifications" class="nav-link">Certifications</a></li>
+                    <li><a href="#contact" class="nav-link nav-link-cta">Let's Talk</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <a href="#contact" class="btn btn-sm btn-gradient hide-mobile">
+                    <i class="fas fa-paper-plane"></i> Contact
+                </a>
+                <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section" id="home">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <span class="pulse-status"></span>
+                        <span>Available for Opportunities</span>
+                    </div>
+
+                    <h1 class="hero-title">
+                        Hi, I'm <span class="gradient-text">Sai Chand Olupalli</span>
+                    </h1>
+
+                    <div class="hero-typing-wrapper">
+                        <span class="typing-prefix">I am a </span>
+                        <span class="typing-text" id="typing-text"></span>
+                        <span class="cursor">&nbsp;</span>
+                    </div>
+
+                    <p class="hero-description">
+                        Motivated <strong>Data Analyst</strong> &amp; <strong>Web Developer</strong> with an MCA degree, skilled in translating complex datasets into actionable insights using Power BI, Tableau, SQL, &amp; Python, while crafting fast, intuitive frontend experiences.
+                    </p>
+
+                    <div class="hero-cta-group">
+                        <a href="#contact" class="btn btn-primary btn-glow">
+                            <i class="fas fa-envelope"></i> Send Message
+                        </a>
+                        <a href="https://drive.google.com/file/d/1S8O1P_apXtO6mmR8hX4ggP2lSBxFdgwy/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+                            <i class="fas fa-file-arrow-down"></i> View Resume
+                        </a>
+                        <a href="#projects" class="btn btn-ghost">
+                            <i class="fas fa-code"></i> Explore Work
+                        </a>
+                    </div>
+
+                    <div class="hero-social-links">
+                        <a href="https://www.linkedin.com/in/saichand-olupalli-045ba6262/" target="_blank" rel="noopener noreferrer" title="LinkedIn Profile">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://github.com/osc672" target="_blank" rel="noopener noreferrer" title="GitHub Profile">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="mailto:saichanduvlk@gmail.com" title="Direct Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="tel:6281604742" title="Call Me">
+                            <i class="fas fa-phone-alt"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="avatar-card-wrapper">
+                        <div class="avatar-glow-ring"></div>
+                        <div class="avatar-card">
+                            <div class="avatar-img-container">
+                                <img src="assets/profile.jpg" alt="Sai Chand Olupalli" class="avatar-img" onerror="this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80'">
+                                <div class="avatar-status-pill">
+                                    <i class="fas fa-circle-check"></i> Verified Profile
+                                </div>
+                            </div>
+                            
+                            <div class="avatar-details">
+                                <h3 class="avatar-name">Olupalli Sai Chand</h3>
+                                <p class="avatar-role">Data Analyst &amp; Software Developer</p>
+                                <div class="avatar-location">
+                                    <i class="fas fa-location-dot"></i> Vijayawada, AP, India
+                                </div>
+                            </div>
+
+                            <div class="avatar-stats-row">
+                                <div class="stat-item">
+                                    <span class="stat-number">8.46</span>
+                                    <span class="stat-label">Max CGPA</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-number">3</span>
+                                    <span class="stat-label">Publications</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-number">10+</span>
+                                    <span class="stat-label">Certificates</span>
+                                </div>
+                            </div>
+
+                            <div class="avatar-footer-actions">
+                                <a href="https://drive.google.com/file/d/1AHjRkP-1_8y1i5KlZ8lAxf9Jono7HVsb/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="link-styled">
+                                    <i class="fas fa-id-badge"></i> View Drive Photo
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Floating Micro Badges -->
+                        <div class="floating-badge badge-top">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Power BI &amp; Tableau</span>
+                        </div>
+                        <div class="floating-badge badge-bottom">
+                            <i class="fas fa-robot"></i>
+                            <span>AI &amp; Deep Learning</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="section about-section" id="about">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">About Me</span>
+                    <h2 class="section-title">Bridging Analytical Rigor &amp; Modern Web Tech</h2>
+                    <p class="section-subtitle">A quick introduction to who I am, what drives me, and the unique skills I bring to the table.</p>
+                </div>
+
+                <div class="about-grid">
+                    <div class="about-bio-card">
+                        <div class="bio-header">
+                            <div class="bio-icon"><i class="fas fa-user-astronaut"></i></div>
+                            <div>
+                                <h3>Olupalli Sai Chand</h3>
+                                <span class="bio-subtitle">MCA Graduate • Data Strategist • Frontend Builder</span>
+                            </div>
+                        </div>
+
+                        <p class="bio-text">
+                            I am a motivated <strong>Data Analyst</strong> with a solid foundation in data analytics, visualization, and machine learning, alongside expanding expertise in <strong>Frontend Development</strong>.
+                        </p>
+                        <p class="bio-text">
+                            With a strong command of <strong>Power BI, Tableau, SQL, and Python</strong>, I excel at discovering hidden patterns, automating reports, and translating complex metrics into actionable executive dashboards. Furthermore, my proficiency in <strong>HTML, CSS, and JavaScript</strong> allows me to design user-friendly, responsive web interfaces.
+                        </p>
+                        <p class="bio-text">
+                            Having published multiple academic research papers on Convolutional Neural Networks (CNNs) in healthcare and machine learning in drug discovery, I combine research discipline with practical engineering.
+                        </p>
+
+                        <div class="bio-highlights">
+                            <div class="highlight-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>MCA Degree from KBNC (CGPA: 8.3)</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Published in 3 National &amp; International Conferences</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Creator of Telegram AI &amp; VQA Bot Assistants</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Proven experience in Computer Vision &amp; CNNs</span>
+                            </div>
+                        </div>
+
+                        <div class="bio-actions">
+                            <a href="https://drive.google.com/file/d/1S8O1P_apXtO6mmR8hX4ggP2lSBxFdgwy/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                                <i class="fas fa-file-pdf"></i> Download Resume
+                            </a>
+                            <a href="#contact" class="btn btn-outline">
+                                <i class="fas fa-envelope-open-text"></i> Get In Touch
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="about-cards-column">
+                        <div class="feature-card">
+                            <div class="feature-icon feature-icon-purple">
+                                <i class="fas fa-chart-pie"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Data Visualization &amp; BI</h4>
+                                <p>Building interactive Power BI dashboards, Tableau stories, and Excel automated reporting pipelines for business decision making.</p>
+                            </div>
+                        </div>
+
+                        <div class="feature-card">
+                            <div class="feature-icon feature-icon-blue">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>SQL &amp; Python Analytics</h4>
+                                <p>Querying relational databases, wrangling data with Pandas &amp; NumPy, and implementing machine learning models.</p>
+                            </div>
+                        </div>
+
+                        <div class="feature-card">
+                            <div class="feature-icon feature-icon-cyan">
+                                <i class="fas fa-laptop-code"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Modern Web Development</h4>
+                                <p>Creating responsive, accessible, and dynamic interfaces with HTML5, CSS3, JavaScript, and backend integration.</p>
+                            </div>
+                        </div>
+
+                        <div class="feature-card">
+                            <div class="feature-icon feature-icon-emerald">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>AI &amp; Neural Networks</h4>
+                                <p>Hands-on experience developing CNN models for fake logo detection, medical imaging, and Telegram AI bots.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section class="section education-section" id="education">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Academic Background</span>
+                    <h2 class="section-title">Education &amp; Qualifications</h2>
+                    <p class="section-subtitle">A timeline of my academic milestones, degrees, and certified accomplishments.</p>
+                </div>
+
+                <div class="timeline-wrapper">
+                    <!-- Post Graduation -->
+                    <div class="timeline-item">
+                        <div class="timeline-marker">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="timeline-card">
+                            <div class="timeline-card-header">
+                                <span class="timeline-year">2022 - 2024</span>
+                                <span class="badge-grade">CGPA: 8.3 / 10</span>
+                            </div>
+                            <h3 class="timeline-degree">Master of Computer Applications (MCA)</h3>
+                            <h4 class="timeline-inst">Kakaraparti Bhavanarayana College (Autonomous), Vijayawada</h4>
+                            <p class="timeline-desc">
+                                Specialized in Advanced Software Engineering, Data Analysis, and Artificial Intelligence. Spearheaded the final year major project on CNN-based Deep Learning.
+                            </p>
+                            <div class="timeline-tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">CNN Deep Learning</span>
+                                <span class="tag">Google Colab</span>
+                                <span class="tag">Data Structures</span>
+                            </div>
+                            <div class="timeline-actions">
+                                <button class="btn btn-sm btn-glass" onclick="openModal('modal-mca')">
+                                    <i class="fas fa-circle-info"></i> View Details &amp; Documents
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Graduation -->
+                    <div class="timeline-item">
+                        <div class="timeline-marker">
+                            <i class="fas fa-university"></i>
+                        </div>
+                        <div class="timeline-card">
+                            <div class="timeline-card-header">
+                                <span class="timeline-year">2019 - 2022</span>
+                                <span class="badge-grade">CGPA: 8.46 / 10</span>
+                            </div>
+                            <h3 class="timeline-degree">Bachelor of Science (BSc - MPCs)</h3>
+                            <h4 class="timeline-inst">AG &amp; SG Siddhartha Degree College of Arts &amp; Science (Autonomous), Vuyyuru</h4>
+                            <p class="timeline-desc">
+                                Comprehensive study in Mathematics, Physics, and Computer Science with distinguished academic performance.
+                            </p>
+                            <div class="timeline-tags">
+                                <span class="tag">Computer Science</span>
+                                <span class="tag">Mathematics</span>
+                                <span class="tag">Physics</span>
+                            </div>
+                            <div class="timeline-actions">
+                                <button class="btn btn-sm btn-glass" onclick="openModal('modal-bsc')">
+                                    <i class="fas fa-circle-info"></i> View Details &amp; Documents
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Intermediate -->
+                    <div class="timeline-item">
+                        <div class="timeline-marker">
+                            <i class="fas fa-school"></i>
+                        </div>
+                        <div class="timeline-card">
+                            <div class="timeline-card-header">
+                                <span class="timeline-year">2017 - 2019</span>
+                                <span class="badge-grade">CGPA: 7.73 / 10</span>
+                            </div>
+                            <h3 class="timeline-degree">Intermediate (MPC)</h3>
+                            <h4 class="timeline-inst">AG &amp; SGS Junior College, Vuyyuru</h4>
+                            <p class="timeline-desc">
+                                Rigorous foundation in Mathematics, Physics, and Chemistry.
+                            </p>
+                            <div class="timeline-actions">
+                                <button class="btn btn-sm btn-glass" onclick="openModal('modal-inter')">
+                                    <i class="fas fa-certificate"></i> View Certificate
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SSC -->
+                    <div class="timeline-item">
+                        <div class="timeline-marker">
+                            <i class="fas fa-book-open"></i>
+                        </div>
+                        <div class="timeline-card">
+                            <div class="timeline-card-header">
+                                <span class="timeline-year">2016 - 2017</span>
+                                <span class="badge-grade">CGPA: 8.3 / 10</span>
+                            </div>
+                            <h3 class="timeline-degree">Secondary School Certificate (SSC)</h3>
+                            <h4 class="timeline-inst">JESUS EM &amp; TM School, Veerankilaku</h4>
+                            <p class="timeline-desc">
+                                Completed secondary schooling with exemplary marks across core subjects.
+                            </p>
+                            <div class="timeline-actions">
+                                <button class="btn btn-sm btn-glass" onclick="openModal('modal-ssc')">
+                                    <i class="fas fa-certificate"></i> View Certificate
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="section skills-section" id="skills">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Core Competencies</span>
+                    <h2 class="section-title">Technical &amp; Interpersonal Skills</h2>
+                    <p class="section-subtitle">Proficiencies acquired through academic programs, industry certifications, and hands-on projects.</p>
+                </div>
+
+                <!-- Skill Filter Tabs -->
+                <div class="skill-tabs">
+                    <button class="skill-tab-btn active" data-tab="technical">Technical Skills</button>
+                    <button class="skill-tab-btn" data-tab="data-tools">BI &amp; Office Tools</button>
+                    <button class="skill-tab-btn" data-tab="soft">Soft &amp; Leadership Skills</button>
+                </div>
+
+                <!-- Technical Skills Panel -->
+                <div class="skills-tab-content active" id="tab-technical">
+                    <div class="skills-grid">
+                        <div class="skill-box-card">
+                            <div class="skill-icon"><i class="fab fa-python"></i></div>
+                            <div class="skill-info">
+                                <h4>Python</h4>
+                                <p>Data Analysis, Pandas, NumPy, Scikit-learn, CNN Deep Learning models &amp; automation scripts.</p>
+                                <div class="skill-bar"><div class="skill-progress" style="width: 85%;"></div></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-box-card">
+                            <div class="skill-icon"><i class="fas fa-database"></i></div>
+                            <div class="skill-info">
+                                <h4>SQL</h4>
+                                <p>Writing complex queries, joins, subqueries, grouping, views, and relational database schema design.</p>
+                                <div class="skill-bar"><div class="skill-progress" style="width: 80%;"></div></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-box-card">
+                            <div class="skill-icon"><i class="fab fa-html5"></i></div>
+                            <div class="skill-info">
+                                <h4>HTML5</h4>
+                                <p>Semantic structuring, accessibility (a11y), modern forms, microdata, and SEO best practices.</p>
+                                <div class="skill-bar"><div class="skill-progress" style="width: 90%;"></div></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-box-card">
+                            <div class="skill-icon"><i class="fab fa-css3-alt"></i></div>
+                            <div class="skill-info">
+                                <h4>CSS3 &amp; Responsive Design</h4>
+                                <p>Flexbox, CSS Grid, custom properties/variables, smooth keyframe animations, glassmorphism.</p>
+                                <div class="skill-bar"><div class="skill-progress" style="width: 88%;"></div></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-box-card">
+                            <div class="skill-icon"><i class="fab fa-js"></i></div>
+                            <div class="skill-info">
+                                <h4>JavaScript (ES6+)</h4>
+                                <p>Modern syntax, asynchronous APIs, fetch, DOM manipulation, interactive widgets &amp; event handling.</p>
+                                <div class="skill-bar"><div class="skill-progress" style="width: 78%;"></div></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-box-card">
+                            <div class="skill-icon"><i class="fas fa-brain"></i></div>
+                            <div class="skill-info">
+                                <h4>Machine Learning / CNN</h4>
+                                <p>Convolutional Neural Networks, image preprocessing, classification, training &amp; evaluation.</p>
+                                <div class="skill-bar"><div class="skill-progress" style="width: 75%;"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BI & Tools Panel -->
+                <div class="skills-tab-content" id="tab-data-tools">
+                    <div class="skills-grid">
+                        <div class="skill-box-card">
+                            <div class="skill-icon"><i class="fas fa-chart-simple"></i></div>
+                            <div class="skill-info">
+                                <h4>Microsoft Power BI</h4>
+                                <p>Creating interactive business dashboards, DAX measures, data relationships, and executive reporting.</p>
+                                <div class="skill-bar"><div class="skill-progress" style="width: 85%;"></div></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-box-card">
+                            <div class="skill-icon"><i class="fas fa-chart-area"></i></div>
+                            <div class="skill-info">
+                                <h4>Tableau</h4>
+                                <p>Advanced visual analytics, calculated fields, dashboard storyboards, and interactive geospatial maps.</p>
+                                <div class="skill-bar"><div class="skill-progress" style="width: 82%;"></div></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-box-card">
+                            <div class="skill-icon"><i class="fas fa-file-excel"></i></div>
+                            <div class="skill-info">
+                                <h4>Microsoft Excel</h4>
+                                <p>Advanced formulas (VLOOKUP, INDEX/MATCH, XLOOKUP), Pivot Tables, conditional formatting &amp; charting.</p>
+                                <div class="skill-bar"><div class="skill-progress" style="width: 90%;"></div></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-box-card">
+                            <div class="skill-icon"><i class="fas fa-file-powerpoint"></i></div>
+                            <div class="skill-info">
+                                <h4>Microsoft PowerPoint</h4>
+                                <p>Creating captivating technical presentations, infographics, and research seminar slide decks.</p>
+                                <div class="skill-bar"><div class="skill-progress" style="width: 88%;"></div></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-box-card">
+                            <div class="skill-icon"><i class="fas fa-file-word"></i></div>
+                            <div class="skill-info">
+                                <h4>Microsoft Word</h4>
+                                <p>Document creation, academic thesis formatting, typography, styling, and technical documentation.</p>
+                                <div class="skill-bar"><div class="skill-progress" style="width: 90%;"></div></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-box-card">
+                            <div class="skill-icon"><i class="fas fa-code-branch"></i></div>
+                            <div class="skill-info">
+                                <h4>Git &amp; GitHub</h4>
+                                <p>Version control, branch management, open-source repositories, and collaborative development.</p>
+                                <div class="skill-bar"><div class="skill-progress" style="width: 80%;"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Soft Skills Panel -->
+                <div class="skills-tab-content" id="tab-soft">
+                    <div class="soft-skills-grid">
+                        <div class="soft-card">
+                            <div class="soft-icon"><i class="fas fa-comments"></i></div>
+                            <h4>Effective Communication</h4>
+                            <p>Articulating data-driven insights clearly across technical and non-technical stakeholders.</p>
+                        </div>
+
+                        <div class="soft-card">
+                            <div class="soft-icon"><i class="fas fa-people-group"></i></div>
+                            <h4>Team Collaboration</h4>
+                            <p>Strong collaborative mindset, contributing constructively in diverse multidisciplinary teams.</p>
+                        </div>
+
+                        <div class="soft-card">
+                            <div class="soft-icon"><i class="fas fa-puzzle-piece"></i></div>
+                            <h4>Analytical Problem Solving</h4>
+                            <p>Adept at dissecting complex business problems and formulating structured solutions.</p>
+                        </div>
+
+                        <div class="soft-card">
+                            <div class="soft-icon"><i class="fas fa-clock"></i></div>
+                            <h4>Time Management</h4>
+                            <p>Prioritizing tasks and managing milestones to reliably deliver quality results before deadlines.</p>
+                        </div>
+
+                        <div class="soft-card">
+                            <div class="soft-icon"><i class="fas fa-layer-group"></i></div>
+                            <h4>Multi-Tasking</h4>
+                            <p>Balancing diverse responsibilities smoothly across coding, data exploration, and research.</p>
+                        </div>
+
+                        <div class="soft-card">
+                            <div class="soft-icon"><i class="fas fa-crown"></i></div>
+                            <h4>Leadership</h4>
+                            <p>Proactive initiative, guiding peers, and taking ownership of project deliverables from concept to launch.</p>
+                        </div>
+
+                        <div class="soft-card">
+                            <div class="soft-icon"><i class="fas fa-dumbbell"></i></div>
+                            <h4>Dedicated &amp; Hardworking</h4>
+                            <p>Persistent in achieving ambitious goals with unwavering commitment and attention to detail.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="section projects-section" id="projects">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Featured Works</span>
+                    <h2 class="section-title">Projects &amp; Intelligent Bots</h2>
+                    <p class="section-subtitle">A showcase of practical AI bots, machine learning systems, and interactive tools built by me.</p>
+                </div>
+
+                <div class="projects-grid">
+                    <!-- Project 1: OSC_BOT -->
+                    <div class="project-card">
+                        <div class="project-header">
+                            <div class="project-type-badge">
+                                <i class="fab fa-telegram"></i> Telegram AI Bot
+                            </div>
+                            <span class="project-status">Live</span>
+                        </div>
+                        <div class="project-body">
+                            <h3 class="project-title">OSC_BOT: Intelligent AI Assistant</h3>
+                            <p class="project-desc">
+                                A high-performance conversational Telegram Bot designed with generative AI capabilities comparable to Gemini AI and ChatGPT. Answers queries, generates explanations, and assists with technical workflows on demand.
+                            </p>
+                            <div class="project-tech-stack">
+                                <span>Telegram Bot API</span>
+                                <span>Python</span>
+                                <span>Generative AI</span>
+                                <span>NLP</span>
+                            </div>
+                        </div>
+                        <div class="project-footer">
+                            <a href="https://t.me/OSCVLK_BOT" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">
+                                <i class="fab fa-telegram-plane"></i> Launch OSC_BOT
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Project 2: VQA_BOT -->
+                    <div class="project-card">
+                        <div class="project-header">
+                            <div class="project-type-badge">
+                                <i class="fas fa-eye"></i> Computer Vision Bot
+                            </div>
+                            <span class="project-status">Live</span>
+                        </div>
+                        <div class="project-body">
+                            <h3 class="project-title">VQA_BOT: Visual Question Answering</h3>
+                            <p class="project-desc">
+                                An intelligent Telegram bot leveraging multi-modal computer vision and NLP models. Users can upload any photograph and ask natural language questions about its visual content, receiving instant, accurate answers.
+                            </p>
+                            <div class="project-tech-stack">
+                                <span>VQA Models</span>
+                                <span>Computer Vision</span>
+                                <span>Telegram API</span>
+                                <span>Python</span>
+                            </div>
+                        </div>
+                        <div class="project-footer">
+                            <a href="https://t.me/visuval_question_answering_bot" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">
+                                <i class="fab fa-telegram-plane"></i> Launch VQA_BOT
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Project 3: FAKE LOGO DETECTION -->
+                    <div class="project-card highlight-card">
+                        <div class="project-header">
+                            <div class="project-type-badge">
+                                <i class="fas fa-shield-halved"></i> Major MCA Project
+                            </div>
+                            <span class="project-status verified"><i class="fas fa-check"></i> CNN Model</span>
+                        </div>
+                        <div class="project-body">
+                            <h3 class="project-title">Online Fake Logo Detection System</h3>
+                            <p class="project-desc">
+                                An advanced deep learning system developed to detect counterfeit and forged brand logos across e-commerce platforms. Built with Convolutional Neural Networks (CNN) to protect corporate intellectual property and safeguard consumers.
+                            </p>
+                            <div class="project-tech-stack">
+                                <span>Convolutional Neural Networks</span>
+                                <span>Python</span>
+                                <span>Google Colab</span>
+                                <span>Deep Learning</span>
+                            </div>
+                        </div>
+                        <div class="project-footer">
+                            <a href="https://drive.google.com/file/d/1digNCIdUvxiO6W2Nl5ByY2k747UqX1Fd/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-gradient">
+                                <i class="fas fa-play"></i> Watch Video Demo
+                            </a>
+                            <button class="btn btn-sm btn-glass" onclick="openModal('modal-mca')">
+                                <i class="fas fa-info-circle"></i> Project Details
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Project 4: Fullstack Portfolio -->
+                    <div class="project-card">
+                        <div class="project-header">
+                            <div class="project-type-badge">
+                                <i class="fas fa-server"></i> Fullstack Web App
+                            </div>
+                            <span class="project-status">Active</span>
+                        </div>
+                        <div class="project-body">
+                            <h3 class="project-title">Interactive Fullstack Portfolio</h3>
+                            <p class="project-desc">
+                                Modern, responsive portfolio with dynamic canvas particles, glassmorphism design system, and an automated backend engine for direct messaging and fast communication.
+                            </p>
+                            <div class="project-tech-stack">
+                                <span>Node.js / Express</span>
+                                <span>HTML5 / CSS3</span>
+                                <span>Vanilla JS</span>
+                            </div>
+                        </div>
+                        <div class="project-footer">
+                            <a href="#contact" class="btn btn-sm btn-outline">
+                                <i class="fas fa-paper-plane"></i> Send Message
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Publications Section -->
+        <section class="section publications-section" id="publications">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Academic Research</span>
+                    <h2 class="section-title">Published Research Papers</h2>
+                    <p class="section-subtitle">Peer-reviewed conference publications in Computational Science, AI in Chemistry, and Mobile Applications.</p>
+                </div>
+
+                <div class="publications-grid">
+                    <!-- Publication 1 -->
+                    <div class="pub-card">
+                        <div class="pub-badge"><i class="fas fa-file-lines"></i> Research Paper #1</div>
+                        <h3 class="pub-title">A Study on Electronic Health Record Analysis Using Convolutional Neural Networks</h3>
+                        
+                        <div class="pub-meta">
+                            <div class="meta-row">
+                                <span class="meta-label"><i class="fas fa-user-pen"></i> Authors:</span>
+                                <span class="meta-val">O. SAI CHAND, M. KALA DEVI</span>
+                            </div>
+                            <div class="meta-row">
+                                <span class="meta-label"><i class="fas fa-barcode"></i> ISBN:</span>
+                                <span class="meta-val code-font">978-81-958673-8-7</span>
+                            </div>
+                            <div class="meta-row">
+                                <span class="meta-label"><i class="fas fa-book-journal-whills"></i> Journal / Conference:</span>
+                                <span class="meta-val">National Conference on Emerging Trends in Computational Science &amp; Technology-2023</span>
+                            </div>
+                            <div class="meta-row">
+                                <span class="meta-label"><i class="fas fa-calendar-check"></i> Date:</span>
+                                <span class="meta-val">29th &amp; 30th September 2023</span>
+                            </div>
+                        </div>
+
+                        <div class="pub-links">
+                            <a href="https://drive.google.com/file/d/1wQNId-Tk84C3o5zrR2WBe8cpk8R_H1MY/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">
+                                <i class="fas fa-file-pdf"></i> View Complete Publication
+                            </a>
+                            <a href="https://drive.google.com/file/d/1smiLzE3Rzif4rLeLTHGlQpoRy-qydNmk/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+                                <i class="fas fa-award"></i> View Certificate
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Publication 2 -->
+                    <div class="pub-card">
+                        <div class="pub-badge"><i class="fas fa-file-lines"></i> Research Paper #2</div>
+                        <h3 class="pub-title">Machine Learning Approach in Drug Discovery: Modern Advancement and Future Perspective</h3>
+                        
+                        <div class="pub-meta">
+                            <div class="meta-row">
+                                <span class="meta-label"><i class="fas fa-user-pen"></i> Authors:</span>
+                                <span class="meta-val">P.L. RAMESH, SHAIK. ASHRAF, O. SAI CHAND</span>
+                            </div>
+                            <div class="meta-row">
+                                <span class="meta-label"><i class="fas fa-barcode"></i> ISBN:</span>
+                                <span class="meta-val code-font">978-81-958704-5-5</span>
+                            </div>
+                            <div class="meta-row">
+                                <span class="meta-label"><i class="fas fa-book-journal-whills"></i> Journal / Seminar:</span>
+                                <span class="meta-val">National Seminar on Artificial Intelligence in Chemistry: Current Trends &amp; Future Directions (NSAIC - 2023)</span>
+                            </div>
+                            <div class="meta-row">
+                                <span class="meta-label"><i class="fas fa-calendar-check"></i> Date:</span>
+                                <span class="meta-val">22nd &amp; 23rd November 2023</span>
+                            </div>
+                        </div>
+
+                        <div class="pub-links">
+                            <a href="https://drive.google.com/file/d/1TybuvSuqTtuRxiWVFW1Dz3JGOVyRffCt/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">
+                                <i class="fas fa-file-pdf"></i> View Complete Publication
+                            </a>
+                            <a href="https://drive.google.com/file/d/1j04uUp-Hk4Gu440oh3_2ybB7soMQsHqx/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+                                <i class="fas fa-award"></i> View Certificate
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Publication 3 -->
+                    <div class="pub-card">
+                        <div class="pub-badge"><i class="fas fa-file-lines"></i> Research Paper #3</div>
+                        <h3 class="pub-title">The Importance of Mobile Applications in Problem-Solving: A Comprehensive Analysis</h3>
+                        
+                        <div class="pub-meta">
+                            <div class="meta-row">
+                                <span class="meta-label"><i class="fas fa-user-pen"></i> Authors:</span>
+                                <span class="meta-val">O. SAI CHAND, SIVA PRASAD GUTAKALA</span>
+                            </div>
+                            <div class="meta-row">
+                                <span class="meta-label"><i class="fas fa-book-journal-whills"></i> Conference:</span>
+                                <span class="meta-val">2nd International Conference on Recent Innovations in Computer Science &amp; Technology (ICRICT-2024)</span>
+                            </div>
+                            <div class="meta-row">
+                                <span class="meta-label"><i class="fas fa-calendar-check"></i> Date:</span>
+                                <span class="meta-val">29th to 31st January 2024</span>
+                            </div>
+                        </div>
+
+                        <div class="pub-links">
+                            <a href="https://drive.google.com/file/d/1FWimPkqbAn15q9SR67sb8S4ytra4ceyk/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">
+                                <i class="fas fa-file-pdf"></i> View Complete Publication
+                            </a>
+                            <a href="https://drive.google.com/file/d/1EttKI4g_wfZphdZr8eqMmOKcxj2-Aysg/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+                                <i class="fas fa-award"></i> View Certificate
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section class="section cert-section" id="certifications">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Credentials</span>
+                    <h2 class="section-title">Professional Certifications</h2>
+                    <p class="section-subtitle">Verified accreditations across Data Analytics, Machine Learning, Java, SQL, and Web Development.</p>
+                </div>
+
+                <!-- Cert Filter Bar -->
+                <div class="cert-filter-bar">
+                    <div class="cert-search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="cert-search-input" placeholder="Search certifications by name, skill, or issuer..." autocomplete="off">
+                    </div>
+                    <div class="cert-filter-buttons">
+                        <button class="cert-btn active" data-filter="all">All</button>
+                        <button class="cert-btn" data-filter="analytics">Data Analytics</button>
+                        <button class="cert-btn" data-filter="ai-python">AI &amp; Python</button>
+                        <button class="cert-btn" data-filter="web-programming">Web &amp; Programming</button>
+                    </div>
+                </div>
+
+                <div class="cert-grid" id="cert-grid">
+                    <!-- FixityEDX -->
+                    <div class="cert-card" data-category="analytics">
+                        <div class="cert-issuer-badge"><i class="fas fa-certificate"></i> FixityEDX</div>
+                        <h4 class="cert-name">Data Analytics</h4>
+                        <p class="cert-desc">Comprehensive certification covering exploratory data analysis, data storytelling, and business metrics.</p>
+                        <a href="https://drive.google.com/file/d/1k9Cy-T5iTbE76ThaERBoYEVI5998WWJP/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="cert-link">
+                            <span>View Certificate</span> <i class="fas fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+
+                    <!-- Indian Servers -->
+                    <div class="cert-card" data-category="ai-python">
+                        <div class="cert-issuer-badge"><i class="fas fa-microchip"></i> Indian Servers</div>
+                        <h4 class="cert-name">Deep Learning</h4>
+                        <p class="cert-desc">Hands-on mastery of neural network architectures, backpropagation, and deep learning models.</p>
+                        <a href="https://drive.google.com/file/d/15V7fKiXQETeZkoSw7wMf_d8g1NmFDhCZ/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="cert-link">
+                            <span>View Certificate</span> <i class="fas fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+
+                    <!-- NPTEL -->
+                    <div class="cert-card" data-category="web-programming">
+                        <div class="cert-issuer-badge"><i class="fas fa-graduation-cap"></i> NPTEL (IIT)</div>
+                        <h4 class="cert-name">Programming in Java</h4>
+                        <p class="cert-desc">Rigorous national certification assessing Object-Oriented Programming, multithreading, and collections.</p>
+                        <a href="https://drive.google.com/file/d/1ESAMajlTjgXxfD1wq99cPjI4hDJHaH47/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="cert-link">
+                            <span>View Certificate</span> <i class="fas fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+
+                    <!-- Cognitive Class 1 -->
+                    <div class="cert-card" data-category="ai-python">
+                        <div class="cert-issuer-badge"><i class="fas fa-brain"></i> Cognitive Class (IBM)</div>
+                        <h4 class="cert-name">Data Visualization with Python</h4>
+                        <p class="cert-desc">Creating plots, heatmaps, interactive charts using Matplotlib, Seaborn, and Folium.</p>
+                        <a href="https://drive.google.com/file/d/1-kYPFgT0qyTHUpyPHchOtnC3Y74ECqGi/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="cert-link">
+                            <span>View Certificate</span> <i class="fas fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+
+                    <!-- Cognitive Class 2 -->
+                    <div class="cert-card" data-category="ai-python">
+                        <div class="cert-issuer-badge"><i class="fas fa-brain"></i> Cognitive Class (IBM)</div>
+                        <h4 class="cert-name">Data Analysis with Python</h4>
+                        <p class="cert-desc">Data wrangling, regression models, statistical hypothesis testing, and machine learning pipelines.</p>
+                        <a href="https://drive.google.com/file/d/1IUo26f7iMWarMJ43NFupb-oGlEZYXTvk/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="cert-link">
+                            <span>View Certificate</span> <i class="fas fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+
+                    <!-- Simplilearn Spark -->
+                    <div class="cert-card" data-category="analytics">
+                        <div class="cert-issuer-badge"><i class="fas fa-bolt"></i> Simplilearn | SkillUp</div>
+                        <h4 class="cert-name">Apache Spark Data Analytics</h4>
+                        <p class="cert-desc">Fundamentals of distributed data processing, resilient distributed datasets (RDDs), and Spark SQL.</p>
+                        <a href="https://drive.google.com/file/d/14h75GkozIJ28xJIb-5IMhCuYSaoVgmrN/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="cert-link">
+                            <span>View Certificate</span> <i class="fas fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+
+                    <!-- Simplilearn ChatGPT -->
+                    <div class="cert-card" data-category="ai-python">
+                        <div class="cert-issuer-badge"><i class="fas fa-robot"></i> Simplilearn | SkillUp</div>
+                        <h4 class="cert-name">ChatGPT for Data Analytics</h4>
+                        <p class="cert-desc">Prompt engineering, synthetic data generation, code assistance, and exploratory automated data workflows.</p>
+                        <a href="https://drive.google.com/file/d/12z3ux2h72CFNJZQ3OFjnpndDRGo8x6co/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="cert-link">
+                            <span>View Certificate</span> <i class="fas fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+
+                    <!-- Great Learning Excel -->
+                    <div class="cert-card" data-category="analytics">
+                        <div class="cert-issuer-badge"><i class="fas fa-award"></i> Great Learning</div>
+                        <h4 class="cert-name">Excel for Beginners &amp; Beyond</h4>
+                        <p class="cert-desc">Formulas, charts, filtering, data validation, and building analytical reports in MS Excel.</p>
+                        <a href="https://drive.google.com/file/d/1a2O_5WeCyARS1MmgHktH0IMcfp2VdSKm/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="cert-link">
+                            <span>View Certificate</span> <i class="fas fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+
+                    <!-- Great Learning Python -->
+                    <div class="cert-card" data-category="ai-python">
+                        <div class="cert-issuer-badge"><i class="fas fa-award"></i> Great Learning</div>
+                        <h4 class="cert-name">Python Fundamentals for Beginners</h4>
+                        <p class="cert-desc">Core syntax, data structures, conditional control flow, functions, and module architecture.</p>
+                        <a href="https://drive.google.com/file/d/1aP-DHfCrWkqr7-WlcPWBBFhGvRTL8U29/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="cert-link">
+                            <span>View Certificate</span> <i class="fas fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+
+                    <!-- Great Learning HTML -->
+                    <div class="cert-card" data-category="web-programming">
+                        <div class="cert-issuer-badge"><i class="fas fa-award"></i> Great Learning</div>
+                        <h4 class="cert-name">Front End Development - HTML</h4>
+                        <p class="cert-desc">Semantic HTML5 page structuring, responsive web containers, and web standards implementation.</p>
+                        <a href="https://drive.google.com/file/d/1pzccZlpaUgUQlrgc0mKqWlXAFUbRAiu6/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="cert-link">
+                            <span>View Certificate</span> <i class="fas fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+
+                    <!-- Great Learning R -->
+                    <div class="cert-card" data-category="analytics">
+                        <div class="cert-issuer-badge"><i class="fas fa-award"></i> Great Learning</div>
+                        <h4 class="cert-name">Introduction to R</h4>
+                        <p class="cert-desc">Statistical computing, data frames, vectorization, and statistical graphics using the R language.</p>
+                        <a href="https://drive.google.com/file/d/1Tkeo4S4ddI_rdRcEFdmyhAHUf1gf38GG/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="cert-link">
+                            <span>View Certificate</span> <i class="fas fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="section contact-section" id="contact">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Direct Communication</span>
+                    <h2 class="section-title">Get In Touch</h2>
+                    <p class="section-subtitle">Have a project, role opening, or question? Feel free to reach out anytime.</p>
+                </div>
+
+                <div class="contact-grid">
+                    <!-- Left: Contact Information Cards -->
+                    <div class="contact-info-panel">
+                        <div class="info-card">
+                            <div class="info-icon"><i class="fas fa-user-circle"></i></div>
+                            <div class="info-text">
+                                <span class="info-label">Full Name</span>
+                                <h4 class="info-value">Olupalli Sai Chand</h4>
+                            </div>
+                        </div>
+
+                        <div class="info-card">
+                            <div class="info-icon"><i class="fas fa-envelope"></i></div>
+                            <div class="info-text">
+                                <span class="info-label">Email Address</span>
+                                <a href="mailto:saichanduvlk@gmail.com" class="info-value link-highlight">saichanduvlk@gmail.com</a>
+                            </div>
+                            <button class="copy-btn" onclick="copyToClipboard('saichanduvlk@gmail.com', this)" title="Copy email">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+
+                        <div class="info-card">
+                            <div class="info-icon"><i class="fas fa-phone"></i></div>
+                            <div class="info-text">
+                                <span class="info-label">Phone / WhatsApp</span>
+                                <a href="tel:6281604742" class="info-value link-highlight">+91 6281604742</a>
+                            </div>
+                            <button class="copy-btn" onclick="copyToClipboard('6281604742', this)" title="Copy phone number">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+
+                        <div class="info-card">
+                            <div class="info-icon"><i class="fas fa-map-pin"></i></div>
+                            <div class="info-text">
+                                <span class="info-label">Location</span>
+                                <p class="info-value">MIG-22, Kavithas, Payakapuram, Vijayawada-520015, Andhra Pradesh, India</p>
+                            </div>
+                        </div>
+
+                        <!-- Availability Card -->
+                        <div class="availability-card">
+                            <div class="status-indicator">
+                                <span class="status-circle"></span>
+                                <strong>Active &amp; Ready</strong>
+                            </div>
+                            <p>Currently open to full-time Data Analyst, Frontend Developer, and Associate Software Engineer roles across India or remote.</p>
+                        </div>
+
+                        <!-- Social Grid -->
+                        <div class="social-connect-bar">
+                            <a href="https://www.linkedin.com/in/saichand-olupalli-045ba6262/" target="_blank" rel="noopener noreferrer" class="social-pill linkedin">
+                                <i class="fab fa-linkedin-in"></i> LinkedIn
+                            </a>
+                            <a href="https://github.com/osc672" target="_blank" rel="noopener noreferrer" class="social-pill github">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                            <a href="https://t.me/OSCVLK_BOT" target="_blank" rel="noopener noreferrer" class="social-pill telegram">
+                                <i class="fab fa-telegram"></i> Telegram
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Right: Contact Form -->
+                    <div class="contact-form-panel">
+                        <div class="form-header-bar">
+                            <div class="form-title-group">
+                                <h3>Send a Message</h3>
+                                <p>Fill in your details below and I will get back to you shortly.</p>
+                            </div>
+                        </div>
+
+                        <form id="contactForm" class="contact-form" novalidate>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="name">Your Name <span class="required">*</span></label>
+                                    <div class="input-wrapper">
+                                        <i class="fas fa-user input-icon"></i>
+                                        <input type="text" id="name" name="name" placeholder="John Doe" required>
+                                    </div>
+                                    <span class="error-msg" id="name-error"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="email">Your Email <span class="required">*</span></label>
+                                    <div class="input-wrapper">
+                                        <i class="fas fa-envelope input-icon"></i>
+                                        <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                                    </div>
+                                    <span class="error-msg" id="email-error"></span>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="phone">Phone Number <span class="optional">(Optional)</span></label>
+                                    <div class="input-wrapper">
+                                        <i class="fas fa-phone input-icon"></i>
+                                        <input type="tel" id="phone" name="phone" placeholder="+91 98765 43210">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="subject">Subject</label>
+                                    <div class="input-wrapper">
+                                        <i class="fas fa-tag input-icon"></i>
+                                        <input type="text" id="subject" name="subject" placeholder="Project collaboration / Job offer">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Message <span class="required">*</span></label>
+                                <div class="input-wrapper textarea-wrapper">
+                                    <i class="fas fa-comment-dots input-icon textarea-icon"></i>
+                                    <textarea id="message" name="message" rows="5" placeholder="Hi Sai Chand, I came across your portfolio and would like to discuss..." required></textarea>
+                                </div>
+                                <span class="error-msg" id="message-error"></span>
+                            </div>
+
+                            <!-- Form Status Message -->
+                            <div id="form-status" class="form-status"></div>
+
+                            <button type="submit" id="submit-btn" class="btn btn-primary btn-submit">
+                                <span class="btn-text"><i class="fas fa-paper-plane"></i> Send Message</span>
+                                <span class="btn-spinner hidden"><i class="fas fa-circle-notch fa-spin"></i> Sending message...</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Education Modals -->
+    <!-- MCA Modal -->
+    <div id="modal-mca" class="modal">
+        <div class="modal-backdrop" onclick="closeModal('modal-mca')"></div>
+        <div class="modal-dialog">
+            <div class="modal-header">
+                <div>
+                    <span class="modal-sub">Post Graduation (2022 - 2024)</span>
+                    <h3 class="modal-title">Master of Computer Applications (MCA)</h3>
+                </div>
+                <button class="modal-close-btn" onclick="closeModal('modal-mca')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-info-item">
+                    <strong>College:</strong> Kakaraparti Bhavanarayana College (Autonomous), Vijayawada
+                </div>
+                <div class="modal-info-item">
+                    <strong>Cumulative GPA:</strong> <span class="badge-grade">8.3 / 10</span>
+                </div>
+                <div class="modal-info-item">
+                    <strong>Major Project:</strong> Online Fake Logo Detection System
+                </div>
+                <div class="modal-info-item">
+                    <strong>Project Objective:</strong> The primary objective of this project is to develop an advanced computer vision system for detecting counterfeit logos on online platforms. The system identifies altered and fraudulent logos with high precision, assisting brands in safeguarding their authenticity.
+                </div>
+                <div class="modal-info-item">
+                    <strong>Technologies Used:</strong> Python, Google Colab, Convolutional Neural Networks (CNN)
+                </div>
+                <div class="modal-doc-links">
+                    <a href="https://drive.google.com/file/d/10Ex7K1PfZNpjk73jM31BKDSqYtYRkm_G/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">
+                        <i class="fas fa-file-lines"></i> View Consolidated Marks Memo (CMM)
+                    </a>
+                    <a href="https://drive.google.com/file/d/1085yaq2pIk5IPTrezZyL7lSMFaaCm9km/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+                        <i class="fas fa-certificate"></i> View Provisional Certificate
+                    </a>
+                    <a href="https://drive.google.com/file/d/1digNCIdUvxiO6W2Nl5ByY2k747UqX1Fd/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-ghost">
+                        <i class="fas fa-play"></i> Watch Project Demo
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- BSc Modal -->
+    <div id="modal-bsc" class="modal">
+        <div class="modal-backdrop" onclick="closeModal('modal-bsc')"></div>
+        <div class="modal-dialog">
+            <div class="modal-header">
+                <div>
+                    <span class="modal-sub">Graduation (2019 - 2022)</span>
+                    <h3 class="modal-title">Bachelor of Science (BSc - MPCs)</h3>
+                </div>
+                <button class="modal-close-btn" onclick="closeModal('modal-bsc')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-info-item">
+                    <strong>College:</strong> AG &amp; SG Siddhartha Degree College of Arts &amp; Science (Autonomous), Vuyyuru
+                </div>
+                <div class="modal-info-item">
+                    <strong>Cumulative GPA:</strong> <span class="badge-grade">8.46 / 10</span>
+                </div>
+                <div class="modal-info-item">
+                    <strong>Core Disciplines:</strong> Mathematics, Physics, Computer Science
+                </div>
+                <div class="modal-doc-links">
+                    <a href="https://drive.google.com/file/d/1pZTp54le4p1pq3dHD3VeOp5kPDgvRZF_/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">
+                        <i class="fas fa-file-lines"></i> View Consolidated Marks Memo (CMM)
+                    </a>
+                    <a href="https://drive.google.com/file/d/10HKZ-N6431ubxrQxZKQVnfQnHbOjV7nc/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+                        <i class="fas fa-certificate"></i> View Provisional Certificate
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Intermediate Modal -->
+    <div id="modal-inter" class="modal">
+        <div class="modal-backdrop" onclick="closeModal('modal-inter')"></div>
+        <div class="modal-dialog">
+            <div class="modal-header">
+                <div>
+                    <span class="modal-sub">Higher Secondary (2017 - 2019)</span>
+                    <h3 class="modal-title">Intermediate (MPC)</h3>
+                </div>
+                <button class="modal-close-btn" onclick="closeModal('modal-inter')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-info-item">
+                    <strong>Institution:</strong> AG &amp; SGS Junior College, Vuyyuru
+                </div>
+                <div class="modal-info-item">
+                    <strong>Cumulative GPA:</strong> <span class="badge-grade">7.73 / 10</span>
+                </div>
+                <div class="modal-doc-links">
+                    <a href="https://drive.google.com/file/d/1PwThGCrxCehIYTbtjh_ZkdxjPctABxFp/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">
+                        <i class="fas fa-certificate"></i> View Intermediate Certificate
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SSC Modal -->
+    <div id="modal-ssc" class="modal">
+        <div class="modal-backdrop" onclick="closeModal('modal-ssc')"></div>
+        <div class="modal-dialog">
+            <div class="modal-header">
+                <div>
+                    <span class="modal-sub">Secondary School (2016 - 2017)</span>
+                    <h3 class="modal-title">Secondary School Certificate (SSC)</h3>
+                </div>
+                <button class="modal-close-btn" onclick="closeModal('modal-ssc')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-info-item">
+                    <strong>School:</strong> JESUS EM &amp; TM School, Veerankilaku
+                </div>
+                <div class="modal-info-item">
+                    <strong>GPA:</strong> <span class="badge-grade">8.3 / 10</span>
+                </div>
+                <div class="modal-doc-links">
+                    <a href="https://drive.google.com/file/d/1lc9DnZ4HyVHI9wbi62HIb_IzkX2h22ZN/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">
+                        <i class="fas fa-certificate"></i> View SSC Certificate
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="#home" class="brand-logo">
+                        <span class="logo-badge">SC</span>
+                        <span class="logo-text">Sai Chand<span class="dot">.</span></span>
+                    </a>
+                    <p class="footer-tagline">
+                        Data Analyst, Machine Learning Enthusiast &amp; Frontend Developer. Turning data into decisions and code into engaging web experiences.
+                    </p>
+                </div>
+
+                <div class="footer-nav">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#education">Education</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#publications">Publications</a></li>
+                        <li><a href="#certifications">Certifications</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact">
+                    <h4>Connect</h4>
+                    <p><i class="fas fa-envelope"></i> saichanduvlk@gmail.com</p>
+                    <p><i class="fas fa-phone"></i> +91 6281604742</p>
+                    <p><i class="fas fa-location-dot"></i> Vijayawada, Andhra Pradesh, India</p>
+                    
+                    <div class="footer-socials">
+                        <a href="https://www.linkedin.com/in/saichand-olupalli-045ba6262/" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/osc672" target="_blank" rel="noopener noreferrer" title="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://t.me/OSCVLK_BOT" target="_blank" rel="noopener noreferrer" title="Telegram Bot"><i class="fab fa-telegram"></i></a>
+                        <a href="mailto:saichanduvlk@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year"></span> <strong>Olupalli Sai Chand</strong>. All Rights Reserved. Built with Node.js &amp; Modern Vanilla CSS.</p>
+                <div class="footer-extra">
+                    <span class="status-dot"></span> Available for Hire
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Main JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>

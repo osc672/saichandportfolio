@@ -1,0 +1,35 @@
+{
+  "name": "saichand-portfolio",
+  "version": "2.0.0",
+  "description": "Sai Chand Olupalli - Advanced Portfolio with React, Node.js, MySQL, and SMTP Contact Engine",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "server": "node server.js",
+    "client": "npm run dev --prefix client",
+    "client:build": "npm run build --prefix client",
+    "build": "npm run build --prefix client",
+    "db:init": "node scripts/init-db.js",
+    "db:view": "node scripts/view-db.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "portfolio",
+    "react",
+    "nodejs",
+    "mysql",
+    "data-analyst",
+    "web-developer",
+    "smtp",
+    "nodemailer"
+  ],
+  "author": "Sai Chand Olupalli",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "mysql2": "^3.12.0",
+    "nodemailer": "^6.9.16"
+  }
+}
