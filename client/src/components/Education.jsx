@@ -1,183 +1,114 @@
-import React from 'react';
+import { useState } from 'react';
+import { portfolioData } from '../data/portfolioData';
+import ScrollReveal from '../reactbits/ScrollReveal';
+import GlowCard from '../reactbits/GlowCard';
+import TiltCard from '../reactbits/TiltCard';
 
 export default function Education() {
-  const educationList = [
-    {
-      period: '2022 - 2024',
-      grade: 'CGPA: 8.3 / 10',
-      degree: 'Master of Computer Applications (MCA)',
-      institution: 'Kakaraparti Bhavanarayana College (Autonomous), Vijayawada',
-      desc: 'Specialized in Advanced Software Engineering, Data Analysis, and Artificial Intelligence. Spearheaded the final year major project on CNN-based Deep Learning for counterfeit logo detection.',
-      tags: ['Python', 'CNN Deep Learning', 'Google Colab', 'Data Structures', 'MySQL'],
-      demoLink: 'https://drive.google.com/file/d/1digNCIdUvxiO6W2Nl5ByY2k747UqX1Fd/view?usp=sharing',
-      demoText: 'Watch Project Demo'
-    },
-    {
-      period: '2019 - 2022',
-      grade: 'CGPA: 8.46 / 10',
-      degree: 'Bachelor of Science (BSc - MPCs)',
-      institution: 'AG & SG Siddhartha Degree College of Arts & Science (Autonomous), Vuyyuru',
-      desc: 'Comprehensive study in Mathematics, Physics, and Computer Science with distinguished academic performance.',
-      tags: ['Computer Science', 'Mathematics', 'Physics', 'Data Structures'],
-      demoLink: null
-    },
-    {
-      period: '2017 - 2019',
-      grade: 'CGPA: 7.73 / 10',
-      degree: 'Intermediate (MPC)',
-      institution: 'AG & SGS Junior College, Vuyyuru',
-      desc: 'Rigorous foundation in Mathematics, Physics, and Chemistry.',
-      tags: ['Mathematics', 'Physics', 'Chemistry'],
-      demoLink: null
-    },
-    {
-      period: '2016 - 2017',
-      grade: 'CGPA: 8.3 / 10',
-      degree: 'Secondary School Certificate (SSC)',
-      institution: 'JESUS EM & TM School, Veerankilaku',
-      desc: 'Completed secondary schooling with exemplary marks across core subjects.',
-      tags: ['Secondary Education', 'General Sciences', 'Mathematics'],
-      demoLink: null
-    }
-  ];
+  const { education } = portfolioData;
+  const [active, setActive] = useState(null);
 
   return (
-    <section id="education" className="section" style={{ background: 'rgba(9, 13, 22, 0.4)' }}>
+    <section id="education" className="section" style={{ background: 'rgba(9,13,22,0.5)' }}>
       <div className="container">
-        <div className="section-header">
-          <span className="section-tag">Academic Background</span>
-          <h2 className="section-title">
-            Education &amp; <span className="gradient-text">Qualifications</span>
-          </h2>
-          <p className="section-subtitle">
-            A timeline of my academic milestones, degrees, and accomplishments.
-          </p>
-        </div>
+        <ScrollReveal direction="up">
+          <div style={{ textAlign: 'center', marginBottom: '64px' }}>
+            <span style={{ display: 'inline-block', padding: '6px 18px', background: 'rgba(56,189,248,0.1)', border: '1px solid rgba(56,189,248,0.3)', borderRadius: '9999px', color: '#7dd3fc', fontSize: '12px', fontWeight: 700, letterSpacing: '1.5px', textTransform: 'uppercase', marginBottom: '16px' }}>
+              Academic Journey
+            </span>
+            <h2 style={{ fontFamily: 'var(--font-heading)', fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, letterSpacing: '-0.5px', color: '#ffffff', marginBottom: '14px' }}>
+              Education & <span className="gradient-text">Qualifications</span>
+            </h2>
+            <p style={{ color: '#94a3b8', fontSize: '16px', lineHeight: 1.7, maxWidth: '580px', margin: '0 auto' }}>
+              A rigorous academic foundation spanning secondary school to postgraduate specialization.
+            </p>
+          </div>
+        </ScrollReveal>
 
-        {/* Normal, Clean Timeline Cards */}
-        <div style={{ maxWidth: '820px', margin: '0 auto', display: 'flex', flexDirection: 'column', gap: '24px' }}>
-          {educationList.map((item, idx) => (
-            <div
-              key={idx}
-              className="glass-card"
-              style={{
-                padding: '24px',
-                border: '1px solid rgba(255, 255, 255, 0.08)'
-              }}
-            >
-              {/* Header: Period & Grade */}
-              <div
-                style={{
-                  display: 'flex',
-                  justifyContent: 'space-between',
-                  alignItems: 'center',
-                  flexWrap: 'wrap',
-                  gap: '8px',
-                  marginBottom: '12px'
-                }}
-              >
-                <span
-                  style={{
-                    padding: '4px 12px',
-                    borderRadius: '9999px',
-                    background: 'rgba(99, 102, 241, 0.12)',
-                    border: '1px solid rgba(99, 102, 241, 0.25)',
-                    color: '#a5b4fc',
-                    fontSize: '12px',
-                    fontWeight: 700,
-                    fontFamily: 'var(--font-mono)'
-                  }}
-                >
-                  {item.period}
-                </span>
+        {/* Timeline */}
+        <div style={{ position: 'relative', maxWidth: '900px', margin: '0 auto' }}>
+          {/* Vertical line */}
+          <div style={{ position: 'absolute', left: '50%', top: 0, bottom: 0, width: '2px', background: 'linear-gradient(to bottom, #6366f1, #a855f7, #38bdf8, transparent)', transform: 'translateX(-50%)', zIndex: 0 }} className="timeline-line" />
 
-                <span className="badge badge-grade">{item.grade}</span>
-              </div>
+          {education.map((edu, i) => {
+            const isLeft = i % 2 === 0;
+            const isOpen = active === edu.id;
 
-              {/* Degree Title */}
-              <h3
-                style={{
-                  fontSize: '20px',
-                  fontWeight: 800,
-                  color: '#ffffff',
-                  marginBottom: '4px',
-                  fontFamily: 'var(--font-heading)'
-                }}
-              >
-                {item.degree}
-              </h3>
+            return (
+              <ScrollReveal key={edu.id} direction={isLeft ? 'left' : 'right'} delay={i * 0.12}>
+                <div style={{ display: 'flex', justifyContent: isLeft ? 'flex-end' : 'flex-start', paddingRight: isLeft ? 'calc(50% + 28px)' : '0', paddingLeft: isLeft ? '0' : 'calc(50% + 28px)', marginBottom: '36px', position: 'relative', zIndex: 1 }} className="timeline-item">
 
-              {/* Institution */}
-              <h4
-                style={{
-                  fontSize: '14px',
-                  color: '#94a3b8',
-                  fontWeight: 500,
-                  marginBottom: '14px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: '8px'
-                }}
-              >
-                <i className="fas fa-university" style={{ color: '#6366f1' }}></i>
-                {item.institution}
-              </h4>
+                  {/* Dot */}
+                  <div style={{
+                    position: 'absolute',
+                    left: '50%',
+                    top: '28px',
+                    transform: 'translate(-50%, -50%)',
+                    width: '18px', height: '18px',
+                    borderRadius: '50%',
+                    background: edu.color,
+                    border: '3px solid #070a12',
+                    boxShadow: `0 0 16px ${edu.color}80`,
+                    zIndex: 2,
+                  }} />
 
-              {/* Description / Matter Details */}
-              <p
-                style={{
-                  fontSize: '14px',
-                  color: '#cbd5e1',
-                  lineHeight: 1.6,
-                  marginBottom: '16px'
-                }}
-              >
-                {item.desc}
-              </p>
+                  {/* Card */}
+                  <TiltCard maxTilt={8} style={{ width: '100%', cursor: 'pointer', padding: '24px', border: `1px solid ${edu.color}30` }} onClick={() => setActive(isOpen ? null : edu.id)}>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: '12px', marginBottom: '12px' }}>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                        <div style={{ width: '42px', height: '42px', borderRadius: '12px', background: `${edu.color}18`, border: `1px solid ${edu.color}40`, display: 'flex', alignItems: 'center', justifyContent: 'center', color: edu.color, fontSize: '18px', flexShrink: 0 }}>
+                          <i className={`fas ${edu.icon}`} />
+                        </div>
+                        <div>
+                          <span style={{ display: 'inline-block', padding: '3px 10px', background: `${edu.color}15`, border: `1px solid ${edu.color}35`, borderRadius: '6px', color: edu.color, fontSize: '11px', fontWeight: 700, letterSpacing: '0.5px', marginBottom: '4px' }}>
+                            {edu.level}
+                          </span>
+                          <div style={{ fontSize: '12px', color: '#64748b', fontFamily: 'var(--font-mono)' }}>{edu.period}</div>
+                        </div>
+                      </div>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                        <span style={{ fontSize: '14px', fontWeight: 700, color: '#34d399', fontFamily: 'var(--font-mono)' }}>{edu.grade}</span>
+                        <i className={`fas fa-chevron-${isOpen ? 'up' : 'down'}`} style={{ color: '#64748b', fontSize: '12px' }} />
+                      </div>
+                    </div>
 
-              {/* Tags */}
-              <div
-                style={{
-                  display: 'flex',
-                  flexWrap: 'wrap',
-                  gap: '8px',
-                  marginBottom: item.demoLink ? '16px' : '0'
-                }}
-              >
-                {item.tags.map((tag) => (
-                  <span
-                    key={tag}
-                    style={{
-                      padding: '3px 10px',
-                      background: 'rgba(255, 255, 255, 0.04)',
-                      border: '1px solid rgba(255, 255, 255, 0.08)',
-                      borderRadius: '6px',
-                      fontSize: '12px',
-                      color: '#94a3b8'
-                    }}
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
+                    <h3 style={{ fontSize: '16px', fontWeight: 800, color: '#ffffff', marginBottom: '6px', lineHeight: 1.35 }}>{edu.degree}</h3>
+                    <p style={{ fontSize: '13px', color: '#64748b', marginBottom: '8px' }}>{edu.institution}</p>
+                    <p style={{ fontSize: '12.5px', color: '#38bdf8', fontWeight: 500 }}>{edu.specialization}</p>
 
-              {/* Only Demo Button (No certificate buttons) */}
-              {item.demoLink && (
-                <div style={{ paddingTop: '12px', borderTop: '1px solid rgba(255, 255, 255, 0.06)' }}>
-                  <a
-                    href={item.demoLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="btn btn-demo btn-sm"
-                  >
-                    <i className="fas fa-play"></i> {item.demoText}
-                  </a>
+                    {/* Expanded */}
+                    {isOpen && (
+                      <div style={{ marginTop: '16px', paddingTop: '16px', borderTop: '1px solid rgba(255,255,255,0.06)' }}>
+                        <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                          {edu.highlights.map((h, j) => (
+                            <div key={j} style={{ display: 'flex', alignItems: 'flex-start', gap: '8px', fontSize: '13px', color: '#cbd5e1' }}>
+                              <i className="fas fa-check-circle" style={{ color: edu.color, marginTop: '3px', fontSize: '11px', flexShrink: 0 }} />
+                              <span>{h}</span>
+                            </div>
+                          ))}
+                        </div>
+                        {edu.demo?.videoUrl && (
+                          <a href={edu.demo.videoUrl} target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', marginTop: '14px', padding: '8px 18px', borderRadius: '8px', background: 'rgba(56,189,248,0.1)', border: '1px solid rgba(56,189,248,0.35)', color: '#38bdf8', fontSize: '13px', fontWeight: 600, textDecoration: 'none' }}>
+                            <i className="fas fa-play" /> Watch Demo
+                          </a>
+                        )}
+                      </div>
+                    )}
+                  </TiltCard>
                 </div>
-              )}
-            </div>
-          ))}
+              </ScrollReveal>
+            );
+          })}
         </div>
       </div>
+
+      <style>{`
+        @media (max-width: 640px) {
+          .timeline-line { display: none; }
+          .timeline-item { padding-left: 0 !important; padding-right: 0 !important; justify-content: stretch !important; }
+        }
+      `}</style>
     </section>
   );
 }
+

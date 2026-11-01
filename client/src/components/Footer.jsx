@@ -1,92 +1,51 @@
-import React from 'react';
 import { portfolioData } from '../data/portfolioData';
+import ShinyText from '../reactbits/ShinyText';
 
 export default function Footer() {
   const { personal } = portfolioData;
+  const year = new Date().getFullYear();
 
   return (
-    <footer
-      style={{
-        background: '#040711',
-        borderTop: '1px solid rgba(255, 255, 255, 0.08)',
-        padding: '50px 0 30px',
-        position: 'relative',
-        zIndex: 1
-      }}
-    >
-      <div className="container">
-        <div
-          style={{
-            display: 'flex',
-            flexWrap: 'wrap',
-            justifyContent: 'space-between',
-            alignItems: 'center',
-            gap: '24px',
-            marginBottom: '32px'
-          }}
-        >
-          {/* Brand */}
-          <div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '8px' }}>
-              <div
-                style={{
-                  width: '32px',
-                  height: '32px',
-                  borderRadius: '8px',
-                  background: 'linear-gradient(135deg, #6366f1, #a855f7)',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  color: '#ffffff',
-                  fontWeight: 800,
-                  fontSize: '14px'
-                }}
-              >
-                SC
-              </div>
-              <h3 style={{ fontSize: '18px', fontWeight: 800, color: '#ffffff', margin: 0 }}>
-                {personal.name}
-              </h3>
-            </div>
-            <p style={{ margin: 0, fontSize: '13px', color: '#94a3b8' }}>
-              Data Analyst • Web Developer • MCA Post Graduate
-            </p>
-          </div>
-
-          {/* Quick links */}
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '20px', fontSize: '14px' }}>
-            <a href="#about" style={{ color: '#94a3b8', textDecoration: 'none' }}>About</a>
-            <a href="#education" style={{ color: '#94a3b8', textDecoration: 'none' }}>Education</a>
-            <a href="#skills" style={{ color: '#94a3b8', textDecoration: 'none' }}>Skills</a>
-            <a href="#projects" style={{ color: '#94a3b8', textDecoration: 'none' }}>Projects</a>
-            <a href="#research" style={{ color: '#94a3b8', textDecoration: 'none' }}>Research</a>
-            <a href="#contact" style={{ color: '#94a3b8', textDecoration: 'none' }}>Contact</a>
-          </div>
+    <footer style={{ borderTop: '1px solid rgba(255,255,255,0.06)', padding: '40px 24px', background: 'rgba(4,7,14,0.9)', position: 'relative', zIndex: 1 }}>
+      <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', gap: '20px' }}>
+        {/* Logo */}
+        <div>
+          <span style={{ fontFamily: 'var(--font-heading)', fontSize: '20px', fontWeight: 900, background: 'linear-gradient(135deg, #6366f1, #a855f7, #38bdf8)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
+            OSC<span style={{ color: '#ffffff', WebkitTextFillColor: '#ffffff' }}>.dev</span>
+          </span>
+          <p style={{ fontSize: '12.5px', color: '#475569', marginTop: '4px' }}>
+            {personal.name} • Data Analyst & Full-Stack Developer
+          </p>
         </div>
 
-        {/* Bottom row */}
-        <div
-          style={{
-            borderTop: '1px solid rgba(255, 255, 255, 0.05)',
-            paddingTop: '24px',
-            display: 'flex',
-            flexWrap: 'wrap',
-            justifyContent: 'space-between',
-            alignItems: 'center',
-            gap: '12px',
-            fontSize: '12px',
-            color: '#64748b'
-          }}
-        >
-          <div>
-            &copy; {new Date().getFullYear()} Olupalli Sai Chand. All rights reserved.
-          </div>
+        {/* Center */}
+        <p style={{ fontSize: '13px', color: '#334155', textAlign: 'center' }}>
+          © {year} <ShinyText text={personal.name} speed={4} /> · Built with React & ReactBits
+        </p>
 
-          <div>
-            Vijayawada, Andhra Pradesh, India
-          </div>
+        {/* Social */}
+        <div style={{ display: 'flex', gap: '10px' }}>
+          {[
+            { href: personal.linkedin, icon: 'fa-linkedin-in' },
+            { href: personal.github, icon: 'fa-github' },
+            { href: `mailto:${personal.email}`, icon: 'fa-envelope' },
+            { href: personal.telegramBot, icon: 'fa-telegram' },
+          ].map(({ href, icon }) => (
+            <a
+              key={icon}
+              href={href}
+              target={href.startsWith('http') ? '_blank' : undefined}
+              rel="noopener noreferrer"
+              style={{ width: '36px', height: '36px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)', color: '#475569', fontSize: '14px', textDecoration: 'none', transition: 'all 0.2s ease' }}
+              onMouseEnter={e => { e.currentTarget.style.color = '#a5b4fc'; e.currentTarget.style.borderColor = 'rgba(99,102,241,0.4)'; }}
+              onMouseLeave={e => { e.currentTarget.style.color = '#475569'; e.currentTarget.style.borderColor = 'rgba(255,255,255,0.08)'; }}
+            >
+              <i className={`fab ${icon}`} />
+            </a>
+          ))}
         </div>
       </div>
     </footer>
   );
 }
+
