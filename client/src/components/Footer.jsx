@@ -26,10 +26,10 @@ export default function Footer() {
         {/* Social */}
         <div style={{ display: 'flex', gap: '10px' }}>
           {[
-            { href: personal.linkedin, icon: 'fa-linkedin-in' },
-            { href: personal.github, icon: 'fa-github' },
-            { href: `mailto:${personal.email}`, icon: 'fa-envelope' },
-            { href: personal.telegramBot, icon: 'fa-telegram' },
+            { href: personal.linkedin, icon: 'fab fa-linkedin-in' },
+            { href: personal.github, icon: 'fab fa-github' },
+            { href: `mailto:${personal.email}`, icon: 'fas fa-envelope' },
+            { href: personal.telegramBot, icon: 'fab fa-telegram' },
           ].map(({ href, icon }) => (
             <a
               key={icon}
@@ -40,7 +40,7 @@ export default function Footer() {
               onMouseEnter={e => { e.currentTarget.style.color = '#a5b4fc'; e.currentTarget.style.borderColor = 'rgba(99,102,241,0.4)'; }}
               onMouseLeave={e => { e.currentTarget.style.color = '#475569'; e.currentTarget.style.borderColor = 'rgba(255,255,255,0.08)'; }}
             >
-              <i className={`fab ${icon}`} />
+              <i className={icon} />
             </a>
           ))}
         </div>

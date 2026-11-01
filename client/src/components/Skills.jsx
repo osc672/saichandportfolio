@@ -69,8 +69,7 @@ export default function Skills() {
               <GlowCard glowColor="99,102,241" style={{ padding: '22px', height: '100%' }}>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '8px' }}>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                    <i className={`fab ${skill.icon} fa-fw`} style={{ color: '#6366f1', fontSize: '18px', width: '20px' }}
-                      onError={(e) => { e.target.className = `fas ${skill.icon} fa-fw`; }} />
+                    <i className={`${skill.icon} fa-fw`} style={{ color: '#6366f1', fontSize: '18px', width: '20px' }} />
                     <h4 style={{ fontSize: '16px', fontWeight: 700, color: '#ffffff' }}>{skill.name}</h4>
                   </div>
                   <span style={{ fontSize: '13px', fontWeight: 700, color: '#38bdf8', fontFamily: 'var(--font-mono)' }}>{skill.level}%</span>

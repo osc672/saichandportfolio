@@ -70,11 +70,11 @@ export default function Hero() {
           <ScrollReveal direction="up" delay={0.5}>
             <div style={{ display: 'flex', justifyContent: 'center', gap: '12px' }}>
               {[
-                { href: personal.linkedin, icon: 'fa-linkedin-in', label: 'LinkedIn', color: '#0ea5e9' },
-                { href: personal.github, icon: 'fa-github', label: 'GitHub', color: '#a5b4fc' },
-                { href: `mailto:${personal.email}`, icon: 'fa-envelope', label: 'Email', color: '#10b981' },
-                { href: `tel:${personal.phone}`, icon: 'fa-phone', label: 'Phone', color: '#f59e0b' },
-                { href: personal.telegramBot, icon: 'fa-telegram', label: 'Telegram', color: '#38bdf8' },
+                { href: personal.linkedin, icon: 'fab fa-linkedin-in', label: 'LinkedIn', color: '#0ea5e9' },
+                { href: personal.github, icon: 'fab fa-github', label: 'GitHub', color: '#a5b4fc' },
+                { href: `mailto:${personal.email}`, icon: 'fas fa-envelope', label: 'Email', color: '#10b981' },
+                { href: `tel:${personal.phone}`, icon: 'fas fa-phone', label: 'Phone', color: '#f59e0b' },
+                { href: personal.telegramBot, icon: 'fab fa-telegram', label: 'Telegram', color: '#38bdf8' },
               ].map(({ href, icon, label, color }) => (
                 <Magnet key={label} strength={0.3}>
                   <a
@@ -96,7 +96,7 @@ export default function Hero() {
                     onMouseEnter={e => { e.currentTarget.style.color = color; e.currentTarget.style.borderColor = color; e.currentTarget.style.background = `${color}18`; e.currentTarget.style.boxShadow = `0 0 16px ${color}40`; }}
                     onMouseLeave={e => { e.currentTarget.style.color = '#94a3b8'; e.currentTarget.style.borderColor = 'rgba(255,255,255,0.1)'; e.currentTarget.style.background = 'rgba(255,255,255,0.04)'; e.currentTarget.style.boxShadow = 'none'; }}
                   >
-                    <i className={`fab ${icon}`} />
+                    <i className={icon} />
                   </a>
                 </Magnet>
               ))}

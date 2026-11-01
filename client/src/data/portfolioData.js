@@ -99,25 +99,25 @@ export const portfolioData = {
 
   skills: {
     technical: [
-      { name: "Python", level: 90, icon: "fa-python", desc: "Data Analysis, Pandas, NumPy, Scikit-learn, CNN Deep Learning & automation scripts." },
-      { name: "SQL & MySQL", level: 88, icon: "fa-database", desc: "Complex queries, window functions, relational DB architecture, triggers, schema optimization." },
-      { name: "React.js", level: 85, icon: "fa-react", desc: "Modern React with hooks, SPA routing, and dynamic glassmorphism UI." },
-      { name: "Node.js & Express", level: 84, icon: "fa-node-js", desc: "REST APIs, async middlewares, SMTP Nodemailer, CORS, full-stack integration." },
-      { name: "Machine Learning & CNN", level: 80, icon: "fa-brain", desc: "Computer vision, image classification, transfer learning with TensorFlow/Keras." },
-      { name: "HTML5 & CSS3", level: 92, icon: "fa-html5", desc: "Semantic HTML, responsive glassmorphism layouts, CSS variables, keyframe animations." }
+      { name: "Python", level: 90, icon: "fab fa-python", desc: "Data Analysis, Pandas, NumPy, Scikit-learn, CNN Deep Learning & automation scripts." },
+      { name: "SQL & MySQL", level: 88, icon: "fas fa-database", desc: "Complex queries, window functions, relational DB architecture, triggers, schema optimization." },
+      { name: "React.js", level: 85, icon: "fab fa-react", desc: "Modern React with hooks, SPA routing, and dynamic glassmorphism UI." },
+      { name: "Node.js & Express", level: 84, icon: "fab fa-node-js", desc: "REST APIs, async middlewares, SMTP Nodemailer, CORS, full-stack integration." },
+      { name: "Machine Learning & CNN", level: 80, icon: "fas fa-brain", desc: "Computer vision, image classification, transfer learning with TensorFlow/Keras." },
+      { name: "HTML5 & CSS3", level: 92, icon: "fab fa-html5", desc: "Semantic HTML, responsive glassmorphism layouts, CSS variables, keyframe animations." }
     ],
     tools: [
-      { name: "Power BI", level: 88, icon: "fa-chart-bar", desc: "Interactive dashboards, DAX queries, data modeling, multi-source ETL pipelines." },
-      { name: "Tableau", level: 84, icon: "fa-chart-pie", desc: "Visual storytelling, calculated fields, dynamic parameters, geographical heatmaps." },
-      { name: "Microsoft Excel", level: 90, icon: "fa-file-excel", desc: "VLOOKUP/XLOOKUP, Pivot Tables, nested formulas, financial summaries, trend forecasting." },
-      { name: "Git & GitHub", level: 82, icon: "fa-github", desc: "Version control, branching strategies, collaborative repository management." },
-      { name: "Google Colab & Jupyter", level: 88, icon: "fa-google", desc: "Cloud GPU acceleration, exploratory data analysis, prototype model training." }
+      { name: "Power BI", level: 88, icon: "fas fa-chart-column", desc: "Interactive dashboards, DAX queries, data modeling, multi-source ETL pipelines." },
+      { name: "Tableau", level: 84, icon: "fas fa-chart-pie", desc: "Visual storytelling, calculated fields, dynamic parameters, geographical heatmaps." },
+      { name: "Microsoft Excel", level: 90, icon: "fas fa-file-excel", desc: "VLOOKUP/XLOOKUP, Pivot Tables, nested formulas, financial summaries, trend forecasting." },
+      { name: "Git & GitHub", level: 82, icon: "fab fa-github", desc: "Version control, branching strategies, collaborative repository management." },
+      { name: "Google Colab & Jupyter", level: 88, icon: "fab fa-google", desc: "Cloud GPU acceleration, exploratory data analysis, prototype model training." }
     ],
     soft: [
-      { name: "Data-Driven Decision Making", level: 92, icon: "fa-lightbulb", desc: "Transforming ambiguous business questions into clear, quantitative KPI insights." },
-      { name: "Executive Storytelling", level: 88, icon: "fa-comments", desc: "Communicating complex analytical models to non-technical stakeholders clearly." },
-      { name: "Critical Problem Solving", level: 90, icon: "fa-puzzle-piece", desc: "Root-cause diagnostics, algorithmic optimization, proactive debugging." },
-      { name: "Continuous Learning", level: 95, icon: "fa-book", desc: "Rapidly mastering emerging AI models, full-stack frameworks, and cloud utilities." }
+      { name: "Data-Driven Decision Making", level: 92, icon: "fas fa-lightbulb", desc: "Transforming ambiguous business questions into clear, quantitative KPI insights." },
+      { name: "Executive Storytelling", level: 88, icon: "fas fa-comments", desc: "Communicating complex analytical models to non-technical stakeholders clearly." },
+      { name: "Critical Problem Solving", level: 90, icon: "fas fa-puzzle-piece", desc: "Root-cause diagnostics, algorithmic optimization, proactive debugging." },
+      { name: "Continuous Learning", level: 95, icon: "fas fa-book-open", desc: "Rapidly mastering emerging AI models, full-stack frameworks, and cloud utilities." }
     ]
   },
 
