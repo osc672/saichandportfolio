@@ -60,7 +60,7 @@ export default function About() {
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', textAlign: 'left', fontSize: '13px', color: '#94a3b8', borderTop: '1px solid rgba(255,255,255,0.08)', paddingTop: '18px' }}>
                   {[
                     { icon: 'fa-location-dot', color: '#38bdf8', text: personal.location },
-                    { icon: 'fa-graduation-cap', color: '#a855f7', text: 'MCA Degree – CGPA: 8.34 / 10' },
+                    { icon: 'fa-graduation-cap', color: '#a855f7', text: 'MCA Degree – CGPA: 8.3 / 10' },
                     { icon: 'fa-briefcase', color: '#10b981', text: 'Ready for Immediate Joining' },
                   ].map(({ icon, color, text }) => (
                     <div key={text} style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>

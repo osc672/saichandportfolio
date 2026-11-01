@@ -3,7 +3,7 @@ import { portfolioData } from '../data/portfolioData';
 import ScrollReveal from '../reactbits/ScrollReveal';
 import GlowCard from '../reactbits/GlowCard';
 
-const categories = ['All', 'Data Analytics', 'Data Engineering', 'AI & Python', 'Web & Programming'];
+const categories = ['All', 'Data Analytics', 'AI & Python', 'Web & Programming'];
 
 export default function Certifications() {
   const { certifications } = portfolioData;
