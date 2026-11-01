@@ -54,7 +54,7 @@ export default function Hero() {
                 </a>
               </Magnet>
               <Magnet strength={0.25}>
-                <a href={personal.resumeLink} target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', alignItems: 'center', gap: '10px', padding: '13px 28px', borderRadius: '12px', background: 'rgba(255,255,255,0.05)', color: '#ffffff', textDecoration: 'none', fontSize: '15px', fontWeight: 700, border: '1px solid rgba(255,255,255,0.15)', transition: 'all 0.2s ease' }}>
+                <a href={personal.resumeLink} target="_blank" rel="noopener noreferrer" download="Sai_Chand_Olupalli_Resume.pdf" style={{ display: 'inline-flex', alignItems: 'center', gap: '10px', padding: '13px 28px', borderRadius: '12px', background: 'rgba(255,255,255,0.05)', color: '#ffffff', textDecoration: 'none', fontSize: '15px', fontWeight: 700, border: '1px solid rgba(255,255,255,0.15)', transition: 'all 0.2s ease' }}>
                   <i className="fas fa-file-arrow-down" /> View Resume
                 </a>
               </Magnet>
@@ -74,7 +74,6 @@ export default function Hero() {
                 { href: personal.github, icon: 'fab fa-github', label: 'GitHub', color: '#a5b4fc' },
                 { href: `mailto:${personal.email}`, icon: 'fas fa-envelope', label: 'Email', color: '#10b981' },
                 { href: `tel:${personal.phone}`, icon: 'fas fa-phone', label: 'Phone', color: '#f59e0b' },
-                { href: personal.telegramBot, icon: 'fab fa-telegram', label: 'Telegram', color: '#38bdf8' },
               ].map(({ href, icon, label, color }) => (
                 <Magnet key={label} strength={0.3}>
                   <a

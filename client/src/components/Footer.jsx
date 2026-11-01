@@ -29,7 +29,6 @@ export default function Footer() {
             { href: personal.linkedin, icon: 'fab fa-linkedin-in' },
             { href: personal.github, icon: 'fab fa-github' },
             { href: `mailto:${personal.email}`, icon: 'fas fa-envelope' },
-            { href: personal.telegramBot, icon: 'fab fa-telegram' },
           ].map(({ href, icon }) => (
             <a
               key={icon}
