@@ -20,7 +20,7 @@ export const portfolioData = {
 
   stats: [
     { label: "MCA Cumulative CGPA", value: "8.34", suffix: " / 10", icon: "fa-graduation-cap", color: "#38bdf8" },
-    { label: "Key Data & AI Projects", value: "3", suffix: "", icon: "fa-code", color: "#a855f7" },
+    { label: "Engineering & Web Projects", value: "5", suffix: "+", icon: "fa-code", color: "#a855f7" },
     { label: "Verified Certifications", value: "5", suffix: "+", icon: "fa-award", color: "#10b981" },
     { label: "Research Publications", value: "3", suffix: "", icon: "fa-book-open", color: "#f59e0b" }
   ],
@@ -142,6 +142,42 @@ export const portfolioData = {
       githubLink: "https://github.com/osc672",
       gradient: "from-indigo-600 to-purple-600",
       bgGlow: "99,102,241"
+    },
+    {
+      id: "smtp-engine",
+      title: "Automated SMTP Mail Engine & Transactional Backend",
+      category: "Backend & Cloud Communication",
+      badge: "Node.js & Nodemailer",
+      period: "2024",
+      description: "Engineered a secure, asynchronous SMTP email dispatch system powered by Node.js, Express, and Nodemailer with Gmail SMTP. Seamlessly integrates with contact form endpoints to transmit instant, structured notifications.",
+      tags: ["Node.js", "Express", "Nodemailer", "SMTP", "REST API", "Gmail API", "Async/Await"],
+      highlights: [
+        "Configured secure TLS/SSL transport with Google App Password authentication protocol",
+        "Automated transactional notification emails triggered by client inquiries in <200ms",
+        "Built-in request validation, email regex sanitization, and structured HTML message templates",
+        "Live-tested and verified with 100% reliable inbox delivery"
+      ],
+      githubLink: "https://github.com/osc672/saichandportfolio",
+      gradient: "from-purple-500 to-pink-500",
+      bgGlow: "168,85,247"
+    },
+    {
+      id: "responsive-websites",
+      title: "Modern Full-Stack Websites & Interactive Portfolios",
+      category: "Web Engineering & UI/UX",
+      badge: "React & Vite",
+      period: "2024",
+      description: "Architected high-performance, responsive websites and interactive web applications using React, Vite, Tailwind CSS, and glassmorphism styling. Features smooth micro-animations, particle canvases, and mobile-first layouts.",
+      tags: ["React.js", "Vite", "JavaScript", "HTML5", "CSS3", "Glassmorphism", "Responsive Web"],
+      highlights: [
+        "Built modular React component architecture with 60 FPS hardware-accelerated animations",
+        "Integrated dynamic interactive elements: Aurora mesh gradients, particle networks, and 3D tilt cards",
+        "Engineered accessible, fully responsive layouts across mobile, tablet, and ultra-wide displays",
+        "Optimized production bundle delivering sub-second load times and high Lighthouse performance"
+      ],
+      githubLink: "https://github.com/osc672",
+      gradient: "from-emerald-500 to-cyan-500",
+      bgGlow: "6,182,212"
     }
   ],
 

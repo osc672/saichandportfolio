@@ -84,16 +84,33 @@ export default function Projects() {
                     </Magnet>
                   )}
                   {proj.githubLink && (
-                    <Magnet strength={0.2}>
+                    <Magnet strength={0.2} style={proj.demoLink ? {} : { flex: 1 }}>
                       <a
                         href={proj.githubLink}
                         target="_blank"
                         rel="noopener noreferrer"
-                        style={{ width: '40px', height: '40px', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '10px', background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.1)', color: '#64748b', fontSize: '16px', textDecoration: 'none', transition: 'all 0.25s ease' }}
-                        onMouseEnter={e => { e.currentTarget.style.color = '#ffffff'; e.currentTarget.style.borderColor = 'rgba(255,255,255,0.3)'; }}
-                        onMouseLeave={e => { e.currentTarget.style.color = '#64748b'; e.currentTarget.style.borderColor = 'rgba(255,255,255,0.1)'; }}
+                        style={{
+                          display: 'flex',
+                          alignItems: 'center',
+                          justifyContent: 'center',
+                          gap: '8px',
+                          width: proj.demoLink ? '42px' : '100%',
+                          height: '42px',
+                          borderRadius: '10px',
+                          background: 'rgba(255,255,255,0.04)',
+                          border: '1px solid rgba(255,255,255,0.1)',
+                          color: '#e2e8f0',
+                          fontSize: '13px',
+                          fontWeight: 600,
+                          textDecoration: 'none',
+                          transition: 'all 0.25s ease',
+                          padding: proj.demoLink ? '0' : '0 16px',
+                        }}
+                        onMouseEnter={e => { e.currentTarget.style.color = '#ffffff'; e.currentTarget.style.borderColor = `rgba(${proj.bgGlow}, 0.5)`; e.currentTarget.style.background = `rgba(${proj.bgGlow}, 0.12)`; }}
+                        onMouseLeave={e => { e.currentTarget.style.color = '#e2e8f0'; e.currentTarget.style.borderColor = 'rgba(255,255,255,0.1)'; e.currentTarget.style.background = 'rgba(255,255,255,0.04)'; }}
                       >
-                        <i className="fab fa-github" />
+                        <i className="fab fa-github" style={{ fontSize: '16px' }} />
+                        {!proj.demoLink && <span>View on GitHub</span>}
                       </a>
                     </Magnet>
                   )}
