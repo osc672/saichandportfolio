@@ -249,8 +249,10 @@ export const portfolioData = {
         "Account-namespaced storage isolating tasks, notes & daily goals",
         "Modern responsive productivity UI with dark & light theme modes"
       ],
-      directUrl: "https://github.com/osc672/myspace",
-      isVercel: false,
+      directUrl: "https://myspace-zeta-eight.vercel.app",
+      liveUrl: "https://myspace-zeta-eight.vercel.app",
+      githubLink: "https://github.com/osc672/myspace",
+      isVercel: true,
       gradient: "from-indigo-600 to-purple-600",
       bgGlow: "99,102,241",
       filterGroup: "websites"
