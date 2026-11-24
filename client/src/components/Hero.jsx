@@ -12,8 +12,42 @@ export default function Hero() {
       <div className="container" style={{ width: '100%' }}>
         <div style={{ maxWidth: '860px', margin: '0 auto', textAlign: 'center' }}>
 
-          {/* Status badge */}
+          {/* Profile Photo Avatar */}
           <ScrollReveal direction="down" delay={0}>
+            <div style={{ position: 'relative', width: '130px', height: '130px', margin: '0 auto 22px' }}>
+              <img
+                src="/profile.jpg"
+                alt={personal.name}
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'cover',
+                  borderRadius: '50%',
+                  border: '3px solid #6366f1',
+                  boxShadow: '0 0 30px rgba(99, 102, 241, 0.45)',
+                  display: 'block'
+                }}
+                onError={e => { e.target.src = '/assets/profile.jpg'; }}
+              />
+              <span
+                style={{
+                  position: 'absolute',
+                  bottom: '6px',
+                  right: '6px',
+                  width: '18px',
+                  height: '18px',
+                  borderRadius: '50%',
+                  background: '#10b981',
+                  border: '3px solid #070a12',
+                  boxShadow: '0 0 10px #10b981'
+                }}
+                title="Available for Opportunities"
+              />
+            </div>
+          </ScrollReveal>
+
+          {/* Status badge */}
+          <ScrollReveal direction="down" delay={0.05}>
             <div style={{ display: 'inline-flex', alignItems: 'center', gap: '10px', padding: '7px 20px', borderRadius: '9999px', background: 'rgba(16,185,129,0.1)', border: '1px solid rgba(16,185,129,0.3)', marginBottom: '28px' }}>
               <span style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#10b981', boxShadow: '0 0 12px #10b981', display: 'inline-block' }} className="animate-pulse-glow" />
               <span style={{ fontSize: '13px', fontWeight: 600, color: '#6ee7b7', letterSpacing: '0.4px' }}>Available for Opportunities</span>

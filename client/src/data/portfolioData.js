@@ -20,7 +20,7 @@ export const portfolioData = {
 
   stats: [
     { label: "MCA Cumulative CGPA", value: "8.3", suffix: " / 10", icon: "fa-graduation-cap", color: "#38bdf8" },
-    { label: "AI & Full-Stack Projects", value: "6", suffix: "+", icon: "fa-code", color: "#a855f7" },
+    { label: "AI & Full-Stack Projects", value: "11", suffix: "+", icon: "fa-code", color: "#a855f7" },
     { label: "Verified Certifications", value: "15", suffix: "+", icon: "fa-award", color: "#10b981" },
     { label: "Research Publications", value: "3", suffix: "", icon: "fa-book-open", color: "#f59e0b" }
   ],
@@ -122,6 +122,159 @@ export const portfolioData = {
 
   projects: [
     {
+      id: "alertngo",
+      title: "Alert NGO Platform",
+      category: "Website Rebuild",
+      badge: "Rebuild a Website",
+      period: "2024",
+      description: "Complete architectural and visual rebuild of the Alert NGO platform. Engineered a fast, accessible, responsive portal featuring humanitarian initiative showcases, donor engagement funnels, and dynamic event management.",
+      tags: ["React", "Vite", "Website Rebuild", "UI/UX Redesign", "Tailwind CSS", "Vercel"],
+      highlights: [
+        "Complete modern architectural rebuild of the legacy NGO site",
+        "Mobile-first responsive layout with fast client-side navigation",
+        "Live production deployment with instant global CDN on Vercel"
+      ],
+      liveUrl: "https://alertngo.vercel.app",
+      demoLink: "https://alertngo.vercel.app",
+      githubLink: "https://github.com/osc672/alertngo",
+      directUrl: "https://alertngo.vercel.app",
+      gradient: "from-amber-500 to-orange-600",
+      bgGlow: "245,158,11",
+      filterGroup: "websites",
+      actionLabel: "Open Live Website (Vercel)"
+    },
+    {
+      id: "sri-royal-living",
+      title: "Sri Royal Living",
+      category: "Website Creation",
+      badge: "Website Creation",
+      period: "2024",
+      description: "Bespoke commercial website creation for Sri Royal Living luxury furniture and home decor. Features a curated high-definition product catalog, responsive showroom gallery, and friction-free customer inquiry funnels.",
+      tags: ["React", "Website Creation", "Luxury Catalog", "E-Commerce", "Responsive UI", "Vercel"],
+      highlights: [
+        "Custom commercial website creation built from the ground up",
+        "Interactive luxury furniture catalog with aesthetic layout",
+        "Live production deployment on Vercel"
+      ],
+      liveUrl: "https://sri-royal-living.vercel.app",
+      demoLink: "https://sri-royal-living.vercel.app",
+      githubLink: "https://github.com/osc672/sri-royal-living",
+      directUrl: "https://sri-royal-living.vercel.app",
+      gradient: "from-emerald-500 to-teal-600",
+      bgGlow: "16,185,129",
+      filterGroup: "websites",
+      actionLabel: "Open Live Website (Vercel)"
+    },
+    {
+      id: "voneuk",
+      title: "MSKC Tech Ltd (Vone UK)",
+      category: "Website Creation",
+      badge: "Website Creation",
+      period: "2024",
+      description: "End-to-end full-stack corporate website creation and custom CMS dashboard for MSKC Tech Ltd (UK). Encompasses 12 service verticals, interactive case studies, blog management engine, and customer enquiry automation.",
+      tags: ["React", "Vite", "PHP", "MySQL", "Tailwind CSS", "REST API", "Website Creation"],
+      highlights: [
+        "Full corporate website creation with secure CMS admin control",
+        "17 relational MySQL database tables with idempotent content seeder",
+        "Complete enterprise-grade architecture and API documentation"
+      ],
+      liveUrl: "https://github.com/osc672/voneuk",
+      githubLink: "https://github.com/osc672/voneuk",
+      directUrl: "https://github.com/osc672/voneuk",
+      gradient: "from-blue-600 to-indigo-700",
+      bgGlow: "59,130,246",
+      filterGroup: "websites",
+      actionLabel: "Open Project (GitHub)"
+    },
+    {
+      id: "ev-rescue",
+      title: "EVRescue - Real-Time EV Charging Network",
+      category: "Full-Stack Mobile App & Cloud",
+      badge: "Mobile App & Cloud",
+      period: "2024",
+      description: "Unified electric vehicle emergency charging marketplace connecting drivers with instant chargers, slot reservations, host monetization, PostGIS geospatial radius search, and real-time charging session monitors.",
+      image: "/assets/ev-rescue.jpg",
+      tags: ["React Native", "Expo", "Node.js", "Express", "PostGIS", "Prisma", "Socket.IO"],
+      highlights: [
+        "Dual-mode mobile application (Driver Mode & Host Provider Mode)",
+        "PostGIS 500m radius real-time emergency charger search & navigation",
+        "Unified system with mobile app, backend API & admin web dashboard"
+      ],
+      liveUrl: "https://github.com/osc672/EV",
+      githubLink: "https://github.com/osc672/EV",
+      directUrl: "https://github.com/osc672/EV",
+      gradient: "from-teal-500 to-emerald-600",
+      bgGlow: "20,184,166",
+      filterGroup: "mobile",
+      actionLabel: "Open Project (GitHub)"
+    },
+    {
+      id: "3danimation-vone",
+      title: "3D Animation Vone",
+      category: "3D Web Engineering",
+      badge: "3D Animation / WebGL",
+      period: "2024",
+      description: "Interactive 3D graphics and immersive animation showcase created with modern WebGL and Three.js technologies. Features fluid camera controls, real-time lighting shaders, and hardware-accelerated 3D assets.",
+      tags: ["Three.js", "WebGL", "React", "3D Animation", "Interactive UI", "Vercel"],
+      highlights: [
+        "Hardware-accelerated 3D interactive graphics rendered in browser",
+        "Real-time lighting shaders and dynamic camera choreography",
+        "Live production deployment on Vercel"
+      ],
+      liveUrl: "https://3danimation-kohl.vercel.app",
+      demoLink: "https://3danimation-kohl.vercel.app",
+      githubLink: "https://github.com/osc672/3Danimation_vone",
+      directUrl: "https://3danimation-kohl.vercel.app",
+      gradient: "from-purple-600 to-violet-700",
+      bgGlow: "168,85,247",
+      filterGroup: "3d",
+      actionLabel: "Open Live 3D Experience (Vercel)"
+    },
+    {
+      id: "school-website",
+      title: "EduSmart School Portal",
+      category: "Website Sample",
+      badge: "Website Sample",
+      period: "2024",
+      description: "Educational institution sample website providing prospective students and parents with academic curriculum details, online admission inquiries, faculty rosters, and dynamic event updates.",
+      tags: ["React", "Website Sample", "Education", "Responsive Design", "CSS3", "Vercel"],
+      highlights: [
+        "Comprehensive website sample for modern schools & colleges",
+        "Structured information architecture for academics and admissions",
+        "Live production deployment on Vercel"
+      ],
+      liveUrl: "https://school-website-iota.vercel.app",
+      demoLink: "https://school-website-iota.vercel.app",
+      githubLink: "https://github.com/osc672/school-website",
+      directUrl: "https://school-website-iota.vercel.app",
+      gradient: "from-sky-500 to-blue-600",
+      bgGlow: "56,189,248",
+      filterGroup: "websites",
+      actionLabel: "Open Live Website (Vercel)"
+    },
+    {
+      id: "myspace",
+      title: "MySpace Design Platform",
+      category: "Web Application",
+      badge: "Web Application",
+      period: "2024",
+      description: "Modern space planning and interior design discovery platform. Built with responsive glassmorphism cards, dynamic visual galleries, and streamlined project showcase layouts.",
+      tags: ["React", "Vite", "Full-Stack", "CSS Modules", "Responsive", "Vercel"],
+      highlights: [
+        "Dynamic visual layout for architectural and space curation",
+        "Fluid animations and modern responsive grid system",
+        "Live production deployment on Vercel"
+      ],
+      liveUrl: "https://myspace-mu-orcin.vercel.app",
+      demoLink: "https://myspace-mu-orcin.vercel.app",
+      githubLink: "https://github.com/osc672/myspace",
+      directUrl: "https://myspace-mu-orcin.vercel.app",
+      gradient: "from-indigo-600 to-purple-600",
+      bgGlow: "99,102,241",
+      filterGroup: "websites",
+      actionLabel: "Open Live Platform (Vercel)"
+    },
+    {
       id: "fake-logo",
       title: "Online Fake Logo Detection System",
       category: "Major MCA Deep Learning Project",
@@ -134,10 +287,14 @@ export const portfolioData = {
         "Feature extraction robust against rotations, crops, color skew & blurring",
         "Automated inference pipeline with visual bounding box reports"
       ],
+      liveUrl: "https://drive.google.com/file/d/1digNCIdUvxiO6W2Nl5ByY2k747UqX1Fd/view?usp=sharing",
       demoLink: "https://drive.google.com/file/d/1digNCIdUvxiO6W2Nl5ByY2k747UqX1Fd/view?usp=sharing",
       githubLink: "https://github.com/osc672",
+      directUrl: "https://drive.google.com/file/d/1digNCIdUvxiO6W2Nl5ByY2k747UqX1Fd/view?usp=sharing",
       gradient: "from-indigo-600 to-purple-600",
-      bgGlow: "99,102,241"
+      bgGlow: "99,102,241",
+      filterGroup: "ai",
+      actionLabel: "Watch MCA Project Video Demo"
     },
     {
       id: "osc-bot",
@@ -152,10 +309,14 @@ export const portfolioData = {
         "24/7 cloud availability via Telegram webhook",
         "Supports markdown responses and structured syntax formatting"
       ],
+      liveUrl: "https://t.me/OSCVLK_BOT",
       demoLink: "https://t.me/OSCVLK_BOT",
       githubLink: "https://github.com/osc672",
+      directUrl: "https://t.me/OSCVLK_BOT",
       gradient: "from-sky-500 to-cyan-500",
-      bgGlow: "56,189,248"
+      bgGlow: "56,189,248",
+      filterGroup: "ai",
+      actionLabel: "Launch Telegram AI Bot"
     },
     {
       id: "vqa-bot",
@@ -170,10 +331,14 @@ export const portfolioData = {
         "Real-time image classification and object localization",
         "Interactive chatbot interface"
       ],
+      liveUrl: "https://t.me/OSCVLK_BOT",
       demoLink: "https://t.me/OSCVLK_BOT",
       githubLink: "https://github.com/osc672",
+      directUrl: "https://t.me/OSCVLK_BOT",
       gradient: "from-purple-600 to-pink-600",
-      bgGlow: "168,85,247"
+      bgGlow: "168,85,247",
+      filterGroup: "ai",
+      actionLabel: "Launch VQA Assistant"
     },
     {
       id: "smtp-engine",
@@ -189,27 +354,13 @@ export const portfolioData = {
         "Built-in request validation, email regex sanitization, and structured HTML message templates",
         "Live-tested and verified with 100% reliable inbox delivery"
       ],
+      liveUrl: "https://github.com/osc672/saichandportfolio",
       githubLink: "https://github.com/osc672/saichandportfolio",
+      directUrl: "https://github.com/osc672/saichandportfolio",
       gradient: "from-amber-500 to-orange-600",
-      bgGlow: "245,158,11"
-    },
-    {
-      id: "responsive-websites",
-      title: "Modern Full-Stack Websites & Interactive Portfolios",
-      category: "Web Engineering & UI/UX",
-      badge: "React & Modern UI",
-      period: "2024",
-      description: "Architected high-performance, responsive websites and interactive web applications using React, Vite, Tailwind CSS, and glassmorphism styling. Features smooth micro-animations, particle canvases, and mobile-first layouts.",
-      tags: ["React.js", "Vite", "JavaScript", "HTML5", "CSS3", "Glassmorphism", "Responsive Web"],
-      highlights: [
-        "Built modular React component architecture with 60 FPS hardware-accelerated animations",
-        "Integrated dynamic interactive elements: Aurora mesh gradients, particle networks, and 3D tilt cards",
-        "Engineered accessible, fully responsive layouts across mobile, tablet, and ultra-wide displays",
-        "Optimized production bundle delivering sub-second load times and high Lighthouse performance"
-      ],
-      githubLink: "https://github.com/osc672",
-      gradient: "from-emerald-500 to-cyan-500",
-      bgGlow: "16,185,129"
+      bgGlow: "245,158,11",
+      filterGroup: "backend",
+      actionLabel: "Open Project (GitHub)"
     }
   ],
 
