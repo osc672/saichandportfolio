@@ -98,25 +98,25 @@ export const portfolioData = {
 
   skills: {
     technical: [
-      { name: "Python", level: 90, icon: "fab fa-python", desc: "Data Analysis, Pandas, NumPy, Scikit-learn, CNN Deep Learning models & automation scripts." },
-      { name: "SQL & MySQL", level: 88, icon: "fas fa-database", desc: "Complex queries, window functions, relational database architecture, triggers, schema optimization." },
-      { name: "React.js", level: 85, icon: "fab fa-react", desc: "Modern React with hooks, component state, SPA routing, and dynamic glassmorphism UI." },
-      { name: "Node.js & Express", level: 84, icon: "fab fa-node-js", desc: "REST APIs, asynchronous middlewares, SMTP Nodemailer engine, CORS, full-stack integration." },
-      { name: "Machine Learning & CNN", level: 80, icon: "fas fa-brain", desc: "Computer vision, image classification, transfer learning, model evaluation with TensorFlow/Keras." },
-      { name: "HTML5 & Vanilla CSS3", level: 92, icon: "fab fa-html5", desc: "Semantic HTML, responsive glassmorphism layouts, CSS variables, keyframe animations." }
+      { name: "Python", icon: "fab fa-python", desc: "Data Analysis, Pandas, NumPy, Scikit-learn, CNN Deep Learning models & automation scripts." },
+      { name: "SQL & MySQL", icon: "fas fa-database", desc: "Complex queries, window functions, relational database architecture, triggers, schema optimization." },
+      { name: "React.js", icon: "fab fa-react", desc: "Modern React with hooks, component state, SPA routing, and dynamic glassmorphism UI." },
+      { name: "Node.js & Express", icon: "fab fa-node-js", desc: "REST APIs, asynchronous middlewares, SMTP Nodemailer engine, CORS, full-stack integration." },
+      { name: "Machine Learning & CNN", icon: "fas fa-brain", desc: "Computer vision, image classification, transfer learning, model evaluation with TensorFlow/Keras." },
+      { name: "HTML5 & Vanilla CSS3", icon: "fab fa-html5", desc: "Semantic HTML, responsive glassmorphism layouts, CSS variables, keyframe animations." }
     ],
     tools: [
-      { name: "Power BI", level: 88, icon: "fas fa-chart-column", desc: "Interactive executive dashboards, DAX queries, data modeling, multi-source ETL pipelines." },
-      { name: "Tableau", level: 84, icon: "fas fa-chart-pie", desc: "Visual storytelling, calculated fields, dynamic parameters, geographical heatmaps." },
-      { name: "Microsoft Excel", level: 90, icon: "fas fa-file-excel", desc: "VLOOKUP/XLOOKUP, Pivot Tables, nested formulas, financial summaries, trend forecasting." },
-      { name: "Git & GitHub", level: 82, icon: "fab fa-github", desc: "Version control, branching strategies, collaborative repository management." },
-      { name: "Google Colab & Jupyter", level: 88, icon: "fab fa-google", desc: "Cloud GPU acceleration, exploratory data analysis, prototype model training." }
+      { name: "Power BI", icon: "fas fa-chart-pie", desc: "Interactive executive dashboards, DAX queries, data modeling, multi-source ETL pipelines." },
+      { name: "Tableau", icon: "fas fa-chart-simple", desc: "Visual storytelling, calculated fields, dynamic parameters, geographical heatmaps." },
+      { name: "Microsoft Excel", icon: "fas fa-file-excel", desc: "VLOOKUP/XLOOKUP, Pivot Tables, nested formulas, financial summaries, trend forecasting." },
+      { name: "Git & GitHub", icon: "fab fa-git-alt", desc: "Version control, branching strategies, collaborative repository management." },
+      { name: "Google Colab & Jupyter", icon: "fas fa-laptop-code", desc: "Cloud GPU acceleration, exploratory data analysis, prototype model training." }
     ],
     soft: [
-      { name: "Data-Driven Decision Making", level: 92, icon: "fas fa-lightbulb", desc: "Transforming ambiguous business questions into clear, quantitative KPI insights." },
-      { name: "Executive Storytelling", level: 88, icon: "fas fa-comments", desc: "Communicating complex analytical models to non-technical stakeholders clearly." },
-      { name: "Critical Problem Solving", level: 90, icon: "fas fa-puzzle-piece", desc: "Root-cause diagnostics, algorithmic optimization, proactive debugging." },
-      { name: "Continuous Learning", level: 95, icon: "fas fa-book-open", desc: "Rapidly mastering emerging AI models, full-stack frameworks, and cloud utilities." }
+      { name: "Data-Driven Decision Making", icon: "fas fa-lightbulb", desc: "Transforming ambiguous business questions into clear, quantitative KPI insights." },
+      { name: "Executive Storytelling", icon: "fas fa-comments", desc: "Communicating complex analytical models to non-technical stakeholders clearly." },
+      { name: "Critical Problem Solving", icon: "fas fa-puzzle-piece", desc: "Root-cause diagnostics, algorithmic optimization, proactive debugging." },
+      { name: "Continuous Learning", icon: "fas fa-arrow-trend-up", desc: "Rapidly mastering emerging AI models, full-stack frameworks, and cloud utilities." }
     ]
   },
 
@@ -134,14 +134,11 @@ export const portfolioData = {
         "Mobile-first responsive layout with fast client-side navigation",
         "Live production deployment with instant global CDN on Vercel"
       ],
-      liveUrl: "https://alertngo.vercel.app",
-      demoLink: "https://alertngo.vercel.app",
-      githubLink: "https://github.com/osc672/alertngo",
       directUrl: "https://alertngo.vercel.app",
+      isVercel: true,
       gradient: "from-amber-500 to-orange-600",
       bgGlow: "245,158,11",
-      filterGroup: "websites",
-      actionLabel: "Open Live Website (Vercel)"
+      filterGroup: "websites"
     },
     {
       id: "sri-royal-living",
@@ -156,14 +153,11 @@ export const portfolioData = {
         "Interactive luxury furniture catalog with aesthetic layout",
         "Live production deployment on Vercel"
       ],
-      liveUrl: "https://sri-royal-living.vercel.app",
-      demoLink: "https://sri-royal-living.vercel.app",
-      githubLink: "https://github.com/osc672/sri-royal-living",
       directUrl: "https://sri-royal-living.vercel.app",
+      isVercel: true,
       gradient: "from-emerald-500 to-teal-600",
       bgGlow: "16,185,129",
-      filterGroup: "websites",
-      actionLabel: "Open Live Website (Vercel)"
+      filterGroup: "websites"
     },
     {
       id: "voneuk",
@@ -178,13 +172,11 @@ export const portfolioData = {
         "17 relational MySQL database tables with idempotent content seeder",
         "Complete enterprise-grade architecture and API documentation"
       ],
-      liveUrl: "https://github.com/osc672/voneuk",
-      githubLink: "https://github.com/osc672/voneuk",
       directUrl: "https://github.com/osc672/voneuk",
+      isVercel: false,
       gradient: "from-blue-600 to-indigo-700",
       bgGlow: "59,130,246",
-      filterGroup: "websites",
-      actionLabel: "Open Project (GitHub)"
+      filterGroup: "websites"
     },
     {
       id: "ev-rescue",
@@ -200,13 +192,11 @@ export const portfolioData = {
         "PostGIS 500m radius real-time emergency charger search & navigation",
         "Unified system with mobile app, backend API & admin web dashboard"
       ],
-      liveUrl: "https://github.com/osc672/EV",
-      githubLink: "https://github.com/osc672/EV",
       directUrl: "https://github.com/osc672/EV",
+      isVercel: false,
       gradient: "from-teal-500 to-emerald-600",
       bgGlow: "20,184,166",
-      filterGroup: "mobile",
-      actionLabel: "Open Project (GitHub)"
+      filterGroup: "mobile"
     },
     {
       id: "3danimation-vone",
@@ -221,14 +211,11 @@ export const portfolioData = {
         "Real-time lighting shaders and dynamic camera choreography",
         "Live production deployment on Vercel"
       ],
-      liveUrl: "https://3danimation-kohl.vercel.app",
-      demoLink: "https://3danimation-kohl.vercel.app",
-      githubLink: "https://github.com/osc672/3Danimation_vone",
       directUrl: "https://3danimation-kohl.vercel.app",
+      isVercel: true,
       gradient: "from-purple-600 to-violet-700",
       bgGlow: "168,85,247",
-      filterGroup: "3d",
-      actionLabel: "Open Live 3D Experience (Vercel)"
+      filterGroup: "mobile"
     },
     {
       id: "school-website",
@@ -243,102 +230,30 @@ export const portfolioData = {
         "Structured information architecture for academics and admissions",
         "Live production deployment on Vercel"
       ],
-      liveUrl: "https://school-website-iota.vercel.app",
-      demoLink: "https://school-website-iota.vercel.app",
-      githubLink: "https://github.com/osc672/school-website",
       directUrl: "https://school-website-iota.vercel.app",
+      isVercel: true,
       gradient: "from-sky-500 to-blue-600",
       bgGlow: "56,189,248",
-      filterGroup: "websites",
-      actionLabel: "Open Live Website (Vercel)"
+      filterGroup: "websites"
     },
     {
       id: "myspace",
-      title: "MySpace Design Platform",
-      category: "Web Application",
-      badge: "Web Application",
+      title: "MySpace Personal Productivity Dashboard",
+      category: "Full-Stack Web Application",
+      badge: "Google OAuth & Dashboard",
       period: "2024",
-      description: "Modern space planning and interior design discovery platform. Built with responsive glassmorphism cards, dynamic visual galleries, and streamlined project showcase layouts.",
-      tags: ["React", "Vite", "Full-Stack", "CSS Modules", "Responsive", "Vercel"],
+      description: "Modern personal productivity platform engineered with React, Vite, Node.js, and Google OAuth 2.0. Features account-namespaced task tracking, notes with autosave, daily intentions, and responsive dark mode.",
+      tags: ["React", "Vite", "Node.js", "Express", "Google OAuth 2.0", "Full-Stack"],
       highlights: [
-        "Dynamic visual layout for architectural and space curation",
-        "Fluid animations and modern responsive grid system",
-        "Live production deployment on Vercel"
+        "Google OAuth 2.0 authentication with server-side token validation",
+        "Account-namespaced storage isolating tasks, notes & daily goals",
+        "Modern responsive productivity UI with dark & light theme modes"
       ],
-      liveUrl: "https://myspace-mu-orcin.vercel.app",
-      demoLink: "https://myspace-mu-orcin.vercel.app",
-      githubLink: "https://github.com/osc672/myspace",
-      directUrl: "https://myspace-mu-orcin.vercel.app",
+      directUrl: "https://github.com/osc672/myspace",
+      isVercel: false,
       gradient: "from-indigo-600 to-purple-600",
       bgGlow: "99,102,241",
-      filterGroup: "websites",
-      actionLabel: "Open Live Platform (Vercel)"
-    },
-    {
-      id: "fake-logo",
-      title: "Online Fake Logo Detection System",
-      category: "Major MCA Deep Learning Project",
-      badge: "Computer Vision & AI",
-      period: "2023 – 2024",
-      description: "An advanced computer vision system leveraging Convolutional Neural Networks (CNNs) to detect manipulated, forged, and counterfeit brand logos across eCommerce marketplaces to protect intellectual property.",
-      tags: ["Python", "CNN", "Deep Learning", "OpenCV", "Google Colab", "TensorFlow"],
-      highlights: [
-        "Trained on comprehensive multi-brand datasets achieving 98.2% test accuracy",
-        "Feature extraction robust against rotations, crops, color skew & blurring",
-        "Automated inference pipeline with visual bounding box reports"
-      ],
-      liveUrl: "https://drive.google.com/file/d/1digNCIdUvxiO6W2Nl5ByY2k747UqX1Fd/view?usp=sharing",
-      demoLink: "https://drive.google.com/file/d/1digNCIdUvxiO6W2Nl5ByY2k747UqX1Fd/view?usp=sharing",
-      githubLink: "https://github.com/osc672",
-      directUrl: "https://drive.google.com/file/d/1digNCIdUvxiO6W2Nl5ByY2k747UqX1Fd/view?usp=sharing",
-      gradient: "from-indigo-600 to-purple-600",
-      bgGlow: "99,102,241",
-      filterGroup: "ai",
-      actionLabel: "Watch MCA Project Video Demo"
-    },
-    {
-      id: "osc-bot",
-      title: "OSC_BOT: Generative AI Assistant",
-      category: "Cloud Bot & Intelligent System",
-      badge: "LLM / Telegram Bot",
-      period: "2024",
-      description: "An interactive Telegram bot integrating modern Generative AI / Large Language Models to deliver contextual question-answering, code debugging, and task automation on demand.",
-      tags: ["Python", "Telegram API", "Generative AI", "REST APIs", "AsyncIO"],
-      highlights: [
-        "Instant natural language answers to complex queries",
-        "24/7 cloud availability via Telegram webhook",
-        "Supports markdown responses and structured syntax formatting"
-      ],
-      liveUrl: "https://t.me/OSCVLK_BOT",
-      demoLink: "https://t.me/OSCVLK_BOT",
-      githubLink: "https://github.com/osc672",
-      directUrl: "https://t.me/OSCVLK_BOT",
-      gradient: "from-sky-500 to-cyan-500",
-      bgGlow: "56,189,248",
-      filterGroup: "ai",
-      actionLabel: "Launch Telegram AI Bot"
-    },
-    {
-      id: "vqa-bot",
-      title: "VQA_BOT: Visual Question Answering Assistant",
-      category: "Multimodal Deep Learning",
-      badge: "Computer Vision + NLP",
-      period: "2024",
-      description: "A multimodal AI Telegram bot combining Computer Vision and Natural Language Processing. Users upload images alongside text questions, and the bot accurately parses image contents to generate contextual answers.",
-      tags: ["Python", "PyTorch", "Vision Transformers", "Telegram Bot API"],
-      highlights: [
-        "Multimodal fusion of image feature embeddings and text prompts",
-        "Real-time image classification and object localization",
-        "Interactive chatbot interface"
-      ],
-      liveUrl: "https://t.me/OSCVLK_BOT",
-      demoLink: "https://t.me/OSCVLK_BOT",
-      githubLink: "https://github.com/osc672",
-      directUrl: "https://t.me/OSCVLK_BOT",
-      gradient: "from-purple-600 to-pink-600",
-      bgGlow: "168,85,247",
-      filterGroup: "ai",
-      actionLabel: "Launch VQA Assistant"
+      filterGroup: "websites"
     },
     {
       id: "smtp-engine",
@@ -354,13 +269,68 @@ export const portfolioData = {
         "Built-in request validation, email regex sanitization, and structured HTML message templates",
         "Live-tested and verified with 100% reliable inbox delivery"
       ],
-      liveUrl: "https://github.com/osc672/saichandportfolio",
-      githubLink: "https://github.com/osc672/saichandportfolio",
       directUrl: "https://github.com/osc672/saichandportfolio",
+      isVercel: false,
       gradient: "from-amber-500 to-orange-600",
       bgGlow: "245,158,11",
-      filterGroup: "backend",
-      actionLabel: "Open Project (GitHub)"
+      filterGroup: "backend"
+    },
+    {
+      id: "fake-logo",
+      title: "Online Fake Logo Detection System",
+      category: "Major MCA Deep Learning Project",
+      badge: "Computer Vision & AI",
+      period: "2023 – 2024",
+      description: "An advanced computer vision system leveraging Convolutional Neural Networks (CNNs) to detect manipulated, forged, and counterfeit brand logos across eCommerce marketplaces to protect intellectual property.",
+      tags: ["Python", "CNN", "Deep Learning", "OpenCV", "Google Colab", "TensorFlow"],
+      highlights: [
+        "Trained on comprehensive multi-brand datasets achieving 98.2% test accuracy",
+        "Feature extraction robust against rotations, crops, color skew & blurring",
+        "Automated inference pipeline with visual bounding box reports"
+      ],
+      directUrl: "https://drive.google.com/file/d/1digNCIdUvxiO6W2Nl5ByY2k747UqX1Fd/view?usp=sharing",
+      isVideo: true,
+      gradient: "from-indigo-600 to-purple-600",
+      bgGlow: "99,102,241",
+      filterGroup: "backend"
+    },
+    {
+      id: "osc-bot",
+      title: "OSC_BOT: Generative AI Assistant",
+      category: "Cloud Bot & Intelligent System",
+      badge: "LLM / Telegram Bot",
+      period: "2024",
+      description: "An interactive Telegram bot integrating modern Generative AI / Large Language Models to deliver contextual question-answering, code debugging, and task automation on demand.",
+      tags: ["Python", "Telegram API", "Generative AI", "REST APIs", "AsyncIO"],
+      highlights: [
+        "Instant natural language answers to complex queries",
+        "24/7 cloud availability via Telegram webhook",
+        "Supports markdown responses and structured syntax formatting"
+      ],
+      directUrl: "https://t.me/OSCVLK_BOT",
+      isTelegram: true,
+      gradient: "from-sky-500 to-cyan-500",
+      bgGlow: "56,189,248",
+      filterGroup: "backend"
+    },
+    {
+      id: "vqa-bot",
+      title: "VQA_BOT: Visual Question Answering Assistant",
+      category: "Multimodal Deep Learning",
+      badge: "Computer Vision + NLP",
+      period: "2024",
+      description: "A multimodal AI Telegram bot combining Computer Vision and Natural Language Processing. Users upload images alongside text questions, and the bot accurately parses image contents to generate contextual answers.",
+      tags: ["Python", "PyTorch", "Vision Transformers", "Telegram Bot API"],
+      highlights: [
+        "Multimodal fusion of image feature embeddings and text prompts",
+        "Real-time image classification and object localization",
+        "Interactive chatbot interface"
+      ],
+      directUrl: "https://t.me/OSCVLK_BOT",
+      isTelegram: true,
+      gradient: "from-purple-600 to-pink-600",
+      bgGlow: "168,85,247",
+      filterGroup: "backend"
     }
   ],
 

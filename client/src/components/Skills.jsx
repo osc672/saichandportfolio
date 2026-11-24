@@ -24,7 +24,7 @@ export default function Skills() {
               Core Competencies
             </span>
             <h2 style={{ fontFamily: 'var(--font-heading)', fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, letterSpacing: '-0.5px', color: '#ffffff', marginBottom: '14px' }}>
-              Skills & <span className="gradient-text">Proficiencies</span>
+              Skills &amp; <span className="gradient-text">Proficiencies</span>
             </h2>
             <p style={{ color: '#94a3b8', fontSize: '16px', lineHeight: 1.7, maxWidth: '580px', margin: '0 auto' }}>
               Tools, frameworks, and methodologies utilized across projects and industry environments.
@@ -62,25 +62,33 @@ export default function Skills() {
           </div>
         </ScrollReveal>
 
-        {/* Skills Grid */}
+        {/* Skills Grid - No Percentages */}
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
           {current.map((skill, i) => (
-            <ScrollReveal key={skill.name} direction="up" delay={i * 0.07}>
-              <GlowCard glowColor="99,102,241" style={{ padding: '22px', height: '100%' }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '8px' }}>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                    <i className={`${skill.icon} fa-fw`} style={{ color: '#6366f1', fontSize: '18px', width: '20px' }} />
-                    <h4 style={{ fontSize: '16px', fontWeight: 700, color: '#ffffff' }}>{skill.name}</h4>
+            <ScrollReveal key={skill.name} direction="up" delay={i * 0.06}>
+              <GlowCard glowColor="99,102,241" style={{ padding: '24px', height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+                <div>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '12px' }}>
+                    <div
+                      style={{
+                        width: '42px',
+                        height: '42px',
+                        borderRadius: '10px',
+                        background: 'rgba(99, 102, 241, 0.12)',
+                        border: '1px solid rgba(99, 102, 241, 0.3)',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        color: '#818cf8',
+                        fontSize: '20px',
+                        flexShrink: 0
+                      }}
+                    >
+                      <i className={`${skill.icon || 'fas fa-check'} fa-fw`} />
+                    </div>
+                    <h4 style={{ fontSize: '17px', fontWeight: 700, color: '#ffffff' }}>{skill.name}</h4>
                   </div>
-                  <span style={{ fontSize: '13px', fontWeight: 700, color: '#38bdf8', fontFamily: 'var(--font-mono)' }}>{skill.level}%</span>
-                </div>
-                <p style={{ fontSize: '13px', color: '#64748b', lineHeight: 1.6, marginBottom: '14px' }}>{skill.desc}</p>
-                {/* Progress Bar */}
-                <div style={{ width: '100%', height: '6px', background: 'rgba(255,255,255,0.05)', borderRadius: '9999px', overflow: 'hidden' }}>
-                  <div
-                    className="skill-bar-fill"
-                    style={{ width: `${skill.level}%` }}
-                  />
+                  <p style={{ fontSize: '13.5px', color: '#94a3b8', lineHeight: 1.65 }}>{skill.desc}</p>
                 </div>
               </GlowCard>
             </ScrollReveal>
@@ -90,4 +98,3 @@ export default function Skills() {
     </section>
   );
 }
-

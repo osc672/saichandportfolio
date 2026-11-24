@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { portfolioData } from '../data/portfolioData';
 import ScrollReveal from '../reactbits/ScrollReveal';
 import GlowCard from '../reactbits/GlowCard';
-import Magnet from '../reactbits/Magnet';
 
 export default function Projects() {
   const { projects } = portfolioData;
@@ -11,15 +10,14 @@ export default function Projects() {
   const filterTabs = [
     { id: 'all', label: 'All Projects', count: projects.length },
     { id: 'websites', label: 'Web Creations & Rebuilds', count: projects.filter(p => p.filterGroup === 'websites').length },
-    { id: 'vercel', label: 'Vercel Live', count: projects.filter(p => p.liveUrl && p.liveUrl.includes('vercel.app')).length },
-    { id: 'mobile', label: 'Mobile & 3D', count: projects.filter(p => p.filterGroup === 'mobile' || p.filterGroup === '3d').length },
-    { id: 'ai', label: 'AI & Deep Learning', count: projects.filter(p => p.filterGroup === 'ai').length }
+    { id: 'vercel', label: 'Live on Vercel', count: projects.filter(p => p.isVercel).length },
+    { id: 'mobile', label: 'Mobile & 3D Web', count: projects.filter(p => p.filterGroup === 'mobile').length },
+    { id: 'backend', label: 'Backend & AI Systems', count: projects.filter(p => p.filterGroup === 'backend').length }
   ];
 
   const filteredProjects = projects.filter((p) => {
     if (activeFilter === 'all') return true;
-    if (activeFilter === 'vercel') return p.liveUrl && p.liveUrl.includes('vercel.app');
-    if (activeFilter === 'mobile') return p.filterGroup === 'mobile' || p.filterGroup === '3d';
+    if (activeFilter === 'vercel') return p.isVercel;
     return p.filterGroup === activeFilter;
   });
 
@@ -33,19 +31,19 @@ export default function Projects() {
     <section id="projects" className="section" style={{ background: 'rgba(9,13,22,0.5)' }}>
       <div className="container">
         <ScrollReveal direction="up">
-          <div style={{ textAlign: 'center', marginBottom: '48px' }}>
+          <div style={{ textAlign: 'center', marginBottom: '44px' }}>
             <span style={{ display: 'inline-block', padding: '6px 18px', background: 'rgba(56,189,248,0.1)', border: '1px solid rgba(56,189,248,0.3)', borderRadius: '9999px', color: '#7dd3fc', fontSize: '12px', fontWeight: 700, letterSpacing: '1.5px', textTransform: 'uppercase', marginBottom: '16px' }}>
               Featured Engineering Portfolio
             </span>
             <h2 style={{ fontFamily: 'var(--font-heading)', fontSize: 'clamp(28px, 4vw, 44px)', fontWeight: 800, letterSpacing: '-0.5px', color: '#ffffff', marginBottom: '14px' }}>
               Projects &amp; <span className="gradient-text">Live Creations</span>
             </h2>
-            <p style={{ color: '#94a3b8', fontSize: '16px', lineHeight: 1.7, maxWidth: '640px', margin: '0 auto 12px' }}>
-              Web creations, rebuilds, mobile architectures, 3D interactive graphics, and deep learning systems.
+            <p style={{ color: '#94a3b8', fontSize: '16px', lineHeight: 1.7, maxWidth: '640px', margin: '0 auto 14px' }}>
+              Web creations, rebuilds, mobile architectures, 3D interactive graphics, and backend cloud systems.
             </p>
-            <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '6px 16px', background: 'rgba(56, 189, 248, 0.08)', border: '1px solid rgba(56, 189, 248, 0.25)', borderRadius: '9999px', color: '#38bdf8', fontSize: '13px', fontWeight: 600 }}>
-              <i className="fas fa-hand-pointer" style={{ animation: 'bounce 1.5s infinite' }}></i>
-              <span>Click any project card to open it directly</span>
+            <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '6px 18px', background: 'rgba(99, 102, 241, 0.1)', border: '1px solid rgba(99, 102, 241, 0.3)', borderRadius: '9999px', color: '#c7d2fe', fontSize: '13px', fontWeight: 600 }}>
+              <i className="fas fa-arrow-pointer" style={{ color: '#38bdf8' }}></i>
+              <span>Click any project card to open directly</span>
             </div>
           </div>
         </ScrollReveal>
@@ -58,7 +56,7 @@ export default function Projects() {
               flexWrap: 'wrap',
               justifyContent: 'center',
               gap: '10px',
-              marginBottom: '44px'
+              marginBottom: '40px'
             }}
           >
             {filterTabs.map((tab) => (
@@ -99,17 +97,19 @@ export default function Projects() {
         </ScrollReveal>
 
         {/* Projects Grid */}
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '28px' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(330px, 1fr))', gap: '28px' }}>
           {filteredProjects.map((proj, i) => {
-            const targetUrl = proj.directUrl || proj.liveUrl || proj.demoLink || proj.githubLink;
-            const hasVercel = proj.liveUrl && proj.liveUrl.includes('vercel.app');
+            const targetUrl = proj.directUrl;
+            const isVercel = proj.isVercel;
+            const isVideo = proj.isVideo;
+            const isTelegram = proj.isTelegram;
 
             return (
-              <ScrollReveal key={proj.id} direction="up" delay={i * 0.08}>
+              <ScrollReveal key={proj.id} direction="up" delay={i * 0.06}>
                 <div
                   onClick={() => handleOpenProject(targetUrl)}
                   style={{ height: '100%', cursor: 'pointer' }}
-                  role="button"
+                  role="link"
                   tabIndex={0}
                   onKeyDown={(e) => {
                     if (e.key === 'Enter' || e.key === ' ') {
@@ -121,19 +121,19 @@ export default function Projects() {
                   <GlowCard
                     glowColor={proj.bgGlow}
                     style={{
-                      padding: '28px',
+                      padding: '26px',
                       height: '100%',
                       display: 'flex',
                       flexDirection: 'column',
                       justifyContent: 'space-between',
-                      border: `1px solid rgba(${proj.bgGlow}, 0.25)`,
+                      border: `1px solid rgba(${proj.bgGlow}, 0.22)`,
                       transition: 'transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease',
                       position: 'relative'
                     }}
                   >
-                    {/* Content Section */}
+                    {/* Top Content */}
                     <div>
-                      {/* Top Header Badge & Direct Open Hint */}
+                      {/* Status / Platform Top Row */}
                       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px', gap: '8px' }}>
                         <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexWrap: 'wrap' }}>
                           <span
@@ -151,22 +151,81 @@ export default function Projects() {
                           >
                             {proj.badge}
                           </span>
-                          {hasVercel && (
+
+                          {/* Interactive Platform Badge */}
+                          {isVercel && (
                             <span
                               style={{
-                                padding: '3px 8px',
+                                padding: '3px 10px',
                                 background: 'rgba(56, 189, 248, 0.15)',
-                                border: '1px solid rgba(56, 189, 248, 0.3)',
-                                borderRadius: '6px',
+                                border: '1px solid rgba(56, 189, 248, 0.4)',
+                                borderRadius: '9999px',
                                 color: '#38bdf8',
+                                fontSize: '11px',
+                                fontWeight: 700,
+                                display: 'inline-flex',
+                                alignItems: 'center',
+                                gap: '5px'
+                              }}
+                            >
+                              <i className="fas fa-globe" style={{ fontSize: '10px' }} /> Live on Vercel
+                            </span>
+                          )}
+
+                          {!isVercel && !isVideo && !isTelegram && (
+                            <span
+                              style={{
+                                padding: '3px 10px',
+                                background: 'rgba(255, 255, 255, 0.06)',
+                                border: '1px solid rgba(255, 255, 255, 0.15)',
+                                borderRadius: '9999px',
+                                color: '#cbd5e1',
                                 fontSize: '11px',
                                 fontWeight: 600,
                                 display: 'inline-flex',
                                 alignItems: 'center',
-                                gap: '4px'
+                                gap: '5px'
                               }}
                             >
-                              <i className="fas fa-globe" style={{ fontSize: '10px' }}></i> Vercel Live
+                              <i className="fab fa-github" style={{ fontSize: '11px' }} /> GitHub Repository
+                            </span>
+                          )}
+
+                          {isVideo && (
+                            <span
+                              style={{
+                                padding: '3px 10px',
+                                background: 'rgba(236, 72, 153, 0.15)',
+                                border: '1px solid rgba(236, 72, 153, 0.35)',
+                                borderRadius: '9999px',
+                                color: '#f472b6',
+                                fontSize: '11px',
+                                fontWeight: 700,
+                                display: 'inline-flex',
+                                alignItems: 'center',
+                                gap: '5px'
+                              }}
+                            >
+                              <i className="fas fa-play" style={{ fontSize: '10px' }} /> Video Demo
+                            </span>
+                          )}
+
+                          {isTelegram && (
+                            <span
+                              style={{
+                                padding: '3px 10px',
+                                background: 'rgba(14, 165, 233, 0.15)',
+                                border: '1px solid rgba(14, 165, 233, 0.35)',
+                                borderRadius: '9999px',
+                                color: '#38bdf8',
+                                fontSize: '11px',
+                                fontWeight: 700,
+                                display: 'inline-flex',
+                                alignItems: 'center',
+                                gap: '5px'
+                              }}
+                            >
+                              <i className="fab fa-telegram" style={{ fontSize: '11px' }} /> Telegram Bot
                             </span>
                           )}
                         </div>
@@ -182,22 +241,24 @@ export default function Projects() {
                             fontFamily: 'var(--font-mono)'
                           }}
                         >
-                          Open <i className="fas fa-arrow-up-right-from-square" style={{ fontSize: '10px' }} />
+                          <i className="fas fa-arrow-up-right-from-square" style={{ fontSize: '11px' }} />
                         </span>
                       </div>
 
-                      {/* Image Banner for EV Rescue */}
+                      {/* Full Uncropped Image Preview for EV Rescue */}
                       {proj.image && (
                         <div
                           style={{
-                            position: 'relative',
                             width: '100%',
-                            height: '185px',
-                            borderRadius: '12px',
+                            borderRadius: '14px',
                             overflow: 'hidden',
-                            marginBottom: '16px',
-                            border: `1px solid rgba(${proj.bgGlow}, 0.3)`,
-                            background: '#041d14'
+                            marginBottom: '18px',
+                            border: `1px solid rgba(${proj.bgGlow}, 0.35)`,
+                            background: 'rgba(4, 23, 16, 0.85)',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            alignItems: 'center',
+                            padding: '12px'
                           }}
                         >
                           <img
@@ -205,31 +266,30 @@ export default function Projects() {
                             alt={proj.title}
                             style={{
                               width: '100%',
-                              height: '100%',
-                              objectFit: 'cover',
-                              objectPosition: 'top center'
+                              maxHeight: '480px',
+                              objectFit: 'contain',
+                              borderRadius: '10px',
+                              display: 'block',
+                              boxShadow: '0 10px 30px rgba(0, 0, 0, 0.7)'
                             }}
                           />
                           <div
                             style={{
-                              position: 'absolute',
-                              bottom: '8px',
-                              left: '8px',
-                              background: 'rgba(4, 29, 20, 0.88)',
-                              backdropFilter: 'blur(8px)',
-                              padding: '4px 10px',
+                              marginTop: '10px',
+                              padding: '4px 12px',
+                              background: 'rgba(16, 185, 129, 0.15)',
+                              border: '1px solid rgba(16, 185, 129, 0.3)',
                               borderRadius: '6px',
                               fontSize: '11px',
-                              color: '#10b981',
+                              color: '#34d399',
                               fontWeight: 700,
-                              border: '1px solid rgba(16, 185, 129, 0.3)',
-                              display: 'flex',
+                              display: 'inline-flex',
                               alignItems: 'center',
                               gap: '6px'
                             }}
                           >
                             <i className="fas fa-charging-station" />
-                            <span>EVRescue Live Interface</span>
+                            <span>Complete Mobile App UI</span>
                           </div>
                         </div>
                       )}
@@ -253,7 +313,7 @@ export default function Projects() {
 
                       {/* Tags */}
                       <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px', marginBottom: '22px' }}>
-                        {proj.tags.map(tag => (
+                        {proj.tags.map((tag) => (
                           <span
                             key={tag}
                             style={{
@@ -272,80 +332,59 @@ export default function Projects() {
                       </div>
                     </div>
 
-                    {/* Actions Row */}
+                    {/* Attractive Interactive Bottom Bar */}
                     <div
                       style={{
-                        paddingTop: '18px',
-                        borderTop: '1px solid rgba(255,255,255,0.06)',
+                        marginTop: 'auto',
+                        paddingTop: '16px',
+                        borderTop: '1px solid rgba(255, 255, 255, 0.07)',
                         display: 'flex',
-                        gap: '10px'
+                        alignItems: 'center',
+                        justifyContent: 'space-between',
+                        fontSize: '13px',
+                        fontWeight: 700,
+                        color: isVercel ? '#38bdf8' : `rgb(${proj.bgGlow})`
                       }}
-                      onClick={(e) => e.stopPropagation()}
                     >
-                      <Magnet strength={0.2} style={{ flex: 1 }}>
-                        <a
-                          href={targetUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          style={{
-                            display: 'flex',
-                            alignItems: 'center',
-                            justifyContent: 'center',
-                            gap: '8px',
-                            width: '100%',
-                            padding: '10px 16px',
-                            borderRadius: '10px',
-                            background: `rgba(${proj.bgGlow}, 0.15)`,
-                            border: `1px solid rgba(${proj.bgGlow}, 0.4)`,
-                            color: `rgb(${proj.bgGlow})`,
-                            fontSize: '13px',
-                            fontWeight: 700,
-                            textDecoration: 'none',
-                            transition: 'all 0.25s ease'
-                          }}
-                        >
-                          <i className={`fas ${hasVercel ? 'fa-globe' : proj.liveUrl ? 'fa-arrow-up-right-from-square' : 'fa-folder-open'}`} />
-                          <span>{hasVercel ? 'Open on Vercel' : proj.actionLabel || 'Open Project'}</span>
-                        </a>
-                      </Magnet>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                        <i
+                          className={
+                            isVercel
+                              ? 'fas fa-globe'
+                              : isTelegram
+                              ? 'fab fa-telegram'
+                              : isVideo
+                              ? 'fas fa-play'
+                              : 'fab fa-github'
+                          }
+                          style={{ fontSize: '14px' }}
+                        />
+                        <span>
+                          {isVercel
+                            ? 'Open Live on Vercel'
+                            : isTelegram
+                            ? 'Open on Telegram'
+                            : isVideo
+                            ? 'Watch Demo Video'
+                            : 'Open on GitHub'}
+                        </span>
+                      </div>
 
-                      {proj.githubLink && (
-                        <Magnet strength={0.2}>
-                          <a
-                            href={proj.githubLink}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label={`View ${proj.title} on GitHub`}
-                            title="View on GitHub"
-                            style={{
-                              display: 'flex',
-                              alignItems: 'center',
-                              justifyContent: 'center',
-                              width: '42px',
-                              height: '42px',
-                              borderRadius: '10px',
-                              background: 'rgba(255,255,255,0.04)',
-                              border: '1px solid rgba(255,255,255,0.1)',
-                              color: '#e2e8f0',
-                              fontSize: '15px',
-                              textDecoration: 'none',
-                              transition: 'all 0.25s ease'
-                            }}
-                            onMouseEnter={e => {
-                              e.currentTarget.style.color = '#ffffff';
-                              e.currentTarget.style.borderColor = `rgba(${proj.bgGlow}, 0.5)`;
-                              e.currentTarget.style.background = `rgba(${proj.bgGlow}, 0.15)`;
-                            }}
-                            onMouseLeave={e => {
-                              e.currentTarget.style.color = '#e2e8f0';
-                              e.currentTarget.style.borderColor = 'rgba(255,255,255,0.1)';
-                              e.currentTarget.style.background = 'rgba(255,255,255,0.04)';
-                            }}
-                          >
-                            <i className="fab fa-github" />
-                          </a>
-                        </Magnet>
-                      )}
+                      <span
+                        style={{
+                          padding: '4px 10px',
+                          borderRadius: '6px',
+                          background: isVercel ? 'rgba(56, 189, 248, 0.15)' : `rgba(${proj.bgGlow}, 0.15)`,
+                          border: isVercel ? '1px solid rgba(56, 189, 248, 0.3)' : `1px solid rgba(${proj.bgGlow}, 0.3)`,
+                          fontSize: '11px',
+                          letterSpacing: '0.4px',
+                          display: 'inline-flex',
+                          alignItems: 'center',
+                          gap: '4px'
+                        }}
+                      >
+                        Open <i className="fas fa-arrow-up-right-from-square" style={{ fontSize: '10px' }} />
+                      </span>
                     </div>
                   </GlowCard>
                 </div>
